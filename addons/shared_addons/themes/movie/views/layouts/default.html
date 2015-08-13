@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		{{ theme:partial name="metadata" }}
+		<!-- Google Analytics -->
+		{{ integration:analytics }}
+	</head>
+	<body>
+		<div class="wrapper">
+
+        <!-- Header section -->
+        <header class="header-wrapper">
+            <div class="container">
+                <!-- Logo link-->
+                <a href='index-2.html' class="logo">
+                    <img alt='logo' src="http://webdevel/indoCPA/svn1576/trunk/agcV2/addons/shared_addons/themes/movie/images/logo.png">
+                </a>
+                
+                <!-- Main website navigation-->
+                <nav id="navigation-box">
+                    <!-- Toggle for mobile menu mode -->
+                    <a href="#" id="navigation-toggle">
+                        <span class="menu-icon">
+                            <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
+                              <span class="lines"></span>
+                            </span>
+                        </span>
+                    </a>
+                    
+                    <!-- Link navigation -->
+                    <ul id="navigation" style="margin-right:0;">
+                        {{ navigation:links group="header" }}
+                    </ul>
+                </nav>
+                
+                <!-- Additional header buttons / Auth and direct link to booking
+                <div class="control-panel">
+                    <a href="#" class="btn btn--sign login-window">Sign in</a>
+                    <a href="#" class="btn btn-md btn--warning btn--book login-window">Book a ticket</a>
+                </div>-->
+
+            </div>
+        </header>
+        
+        <!-- Search bar -->
+        <div class="search-wrapper">
+            <div class="container container--add">
+                <form id='search-form' method='get' class="search">
+                    <input type="text" class="search__field" placeholder="Search">
+                    <select name="sorting_item" id="search-sort" class="search__sort" tabindex="0">
+                        <option value="1" selected='selected'>By title</option>
+                        <option value="2">By year</option>
+                        <option value="3">By producer</option>
+                        <option value="4">By title</option>
+                        <option value="5">By year</option>
+                    </select>
+                    <button type='submit' class="btn btn-md btn--danger search__button">search a movie</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <section class="container">
+            <div class="col-sm-8 col-md-9">
+				{{ template:body }}
+            </div>
+                    
+            {{ theme:partial name="sidebar" }}
+
+        </section>
+        {{ theme:partial name="footer" }}	
+	</body>
+</html>
