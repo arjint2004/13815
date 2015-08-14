@@ -85,7 +85,49 @@
 
             </section>
         </div>
+		<? 
+		if(isset($post[0]['headfoot']) && $post[0]['headfoot']=='detail_movie'){?>
+		<!-- JavaScript-->
+        <!-- jQuery 1.9.1--> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="<?=base_url()?>addons/shared_addons/themes/movie/js/external/jquery-1.10.1.min.js"><\/script>')</script>
+        <!-- Migrate --> 
+		{{ theme:js file="external/jquery-migrate-1.2.1.min.js" }}		
+        <!-- jQuery UI -->
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <!-- Bootstrap 3--> 
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
+        <!-- Mobile menu -->
+		{{ theme:js file="jquery.mobile.menu.js" }}	
+         <!-- Select -->
+		{{ theme:js file="external/jquery.selectbox-0.2.min.js" }}	
+        <!-- Stars rate -->
+		{{ theme:js file="external/jquery.raty.js" }}
+        <!-- Swiper slider -->
+		{{ theme:js file="external/idangerous.swiper.min.js" }}
+        <!-- Magnific-popup --> 
+		{{ theme:js file="external/jquery.magnific-popup.min.js" }}
+        <!--*** Google map  ***-->
+        <script src="https://maps.google.com/maps/api/js?sensor=true"></script> 
+        <!--*** Google map infobox  ***-->
+		{{ theme:js file="external/infobox.js" }}
+        <!-- Share buttons -->
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525fd5e9061e7ef0"></script>
+
+        <!-- Form element -->
+		{{ theme:js file="external/form-element.js" }}
+        <!-- Form validation -->
+		{{ theme:js file="form.js" }}
+        <!-- Custom -->
+		{{ theme:js file="custom.js" }}
+		<script type="text/javascript">
+            $(document).ready(function() {
+                init_MoviePage();
+            });
+		</script>		
+		<?}else{?>
 		<!-- JavaScript-->
         <!-- jQuery 1.9.1--> 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -112,3 +154,4 @@
                 init_MovieList();
             });
 		</script>
+		<? } ?>

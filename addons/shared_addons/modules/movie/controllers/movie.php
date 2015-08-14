@@ -209,12 +209,12 @@ class Movie extends Public_Controller
 		);
 		$data = $this->streams->entries->get_entries($params);
 		$post = (isset($data['entries'][0])) ? $data['entries'][0] : null;
-
+		$post['headfoot']='detail_movie';
 		if ( ! $post or ($post['status'] !== 'live' and ! $this->ion_auth->is_admin()))
 		{
 			redirect('movie');
 		}
-
+		
 		$this->_single_view($post);
 	}
 
