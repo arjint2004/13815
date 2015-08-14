@@ -14,6 +14,9 @@ $lang['cp:manage_comments']				= 'Manage Comments';
 $lang['cp:manage_pages']				= 'Manage Pages';
 $lang['cp:manage_files']				= 'Manage Files';
 $lang['cp:manage_users']				= 'Manage Users';
+$lang['cp:manage_movie']				= 'Manage Movie';
+$lang['cp:admin_movie']					= 'Movie';
+$lang['cp:manage_movie_reload']			= 'Reload All Movie';
 
 // Header
 $lang['cp:to_home'] 					= 'Back to the Dashboard';

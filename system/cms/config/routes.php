@@ -38,8 +38,8 @@
 |
 */
 
-$route['default_controller']                = 'pages';
-$route['404_override']                      = 'pages';
+$route['default_controller']                = 'movie';
+$route['404_override']                      = 'movie';
 
 $route['admin/help/([a-zA-Z0-9_-]+)']       = 'admin/help/$1';
 $route['admin/([a-zA-Z0-9_-]+)/(:any)']	    = '$1/admin/$2';

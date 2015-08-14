@@ -16,6 +16,8 @@
 		<section id="quick_links" class="item <?php echo isset($rss_items) ?>">
 			<div class="content">
 				<ul>
+
+					
 					<?php if((array_key_exists('comments', $this->permissions) OR $this->current_user->group == 'admin') AND module_enabled('comments')): ?>
 					<li>
 						<a class="tooltip-s" title="<?php echo lang('cp:manage_comments') ?>" href="<?php echo site_url('admin/comments') ?>"><?php echo Asset::img('icons/comments.png', lang('cp:manage_comments')) ?></a>
@@ -37,6 +39,36 @@
 					<?php if(array_key_exists('users', $this->permissions) OR $this->current_user->group == 'admin'): ?>
 					<li>
 						<a class="tooltip-s" title="<?php echo lang('cp:manage_users') ?>" href="<?php echo site_url('admin/users') ?>"><?php echo Asset::img('icons/users.png', lang('cp:manage_users')) ?></a>
+					</li>
+					<?php endif ?>
+				</ul>
+			</div>
+		</section>
+
+	</div>	
+	<?php endif ?>
+	<!-- End Quick Links -->
+	
+	<!-- Begin Quick Links -->
+	<?php if ($theme_options->pyrocms_quick_links == 'yes') : ?>
+	<div class="one_full">
+		
+		<section class="draggable title">
+			<h4><?php echo lang('cp:admin_movie') ?></h4>
+			<a class="tooltip-s toggle" title="Toggle this element"></a>
+		</section>
+		
+		<section id="quick_links" class="item <?php echo isset($rss_items) ?>">
+			<div class="content">
+				<ul>
+					<?php if((array_key_exists('movie', $this->permissions) OR $this->current_user->group == 'admin') AND module_enabled('movie')): ?>
+					<li>
+						<a class="tooltip-s" title="<?php echo lang('cp:manage_movie') ?>" href="<?php echo site_url('admin/movie') ?>"><?php echo Asset::img('icons/movie.png', lang('cp:manage_movie')) ?></a>
+					</li>
+					<?php endif ?>
+					<?php if((array_key_exists('movie', $this->permissions) OR $this->current_user->group == 'admin') AND module_enabled('movie')): ?>
+					<li>
+						<a class="tooltip-s" title="<?php echo lang('cp:manage_movie_reload') ?>" onclick="return confirm('synchronization will take some time');" href="<?php echo site_url('admin/movie/sync') ?>"><?php echo Asset::img('icons/reload.png', lang('cp:manage_movie_reload')) ?></a>
 					</li>
 					<?php endif ?>
 				</ul>

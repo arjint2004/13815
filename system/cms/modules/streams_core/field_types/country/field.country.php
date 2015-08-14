@@ -83,7 +83,7 @@ class Field_country
 
 		if (trim($input) != '')
 		{
-			$return['name'] = $countries[$input];
+			$return['name'] = @$countries[$input];
 			$return['code']	= $input;
 			
 			return $return;
