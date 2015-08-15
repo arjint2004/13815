@@ -49,11 +49,11 @@ class Movie extends Public_Controller
 	 */
 	public function index()
 	{ 
-		// Get our comment count whil we're at it.
+		// Get our commentmovie count whil we're at it.
 		$this->row_m->sql['select'][] = "(SELECT COUNT(id) FROM ".
-				$this->db->protect_identifiers('comments', true)." WHERE module='movie'
+				$this->db->protect_identifiers('commentmovies', true)." WHERE module='movie'
 				AND is_active='1' AND entry_key='movie:post' AND entry_plural='movie:posts'
-				AND entry_id=".$this->db->protect_identifiers('movie.id', true).") as `comment_count`";
+				AND entry_id=".$this->db->protect_identifiers('movie.id', true).") as `commentmovie_count`";
 
 		// Get the latest movie posts
 		$posts = $this->streams->entries->get_entries(array(
@@ -200,7 +200,10 @@ class Movie extends Public_Controller
 		{
 			redirect('movie');
 		}
-
+		$this->row_m->sql['select'][] = "(SELECT COUNT(id) FROM ".
+				$this->db->protect_identifiers('commentmovies', true)." WHERE module='movie'
+				AND is_active='1' AND entry_key='movie:post' AND entry_plural='movie:posts'
+				AND entry_id=".$this->db->protect_identifiers('movie.id', true).") as `commentmovie_count`";
 		$params = array(
 			'stream'		=> 'movie',
 			'namespace'		=> 'movies',
@@ -214,7 +217,11 @@ class Movie extends Public_Controller
 		{
 			redirect('movie');
 		}
-		
+		$ognr=explode("&#44; ",$post['genre']);
+
+		$post['others']=$this->db->query("SELECT m.created_on,m.slug,m.title,f.path,f.filename FROM  ".$this->db->protect_identifiers('movie', true)." m JOIN ".$this->db->protect_identifiers('files', true)." f ON m.image=f.id WHERE m.genre LIKE '%".$ognr[0]."%' ORDER BY RAND() LIMIT 10")->result_array();
+		//echo "<pre>";
+		//print_r($other);
 		$this->_single_view($post);
 	}
 
@@ -437,11 +444,11 @@ class Movie extends Public_Controller
 			$this->template->set_metadata('article:tag', $keyword, 'og');
 		}
 
-		// If comments are enabled, go fetch them all
-		if (Settings::get('enable_comments'))
+		// If commentmovies are enabled, go fetch them all
+		if (Settings::get('enable_commentmovies'))
 		{
 			// Load Comments so we can work out what to do with them
-			$this->load->library('comments/comments', array(
+			$this->load->library('commentmovies/commentmovies', array(
 				'entry_id' => $post['id'],
 				'entry_title' => $post['title'],
 				'module' => 'movie',
@@ -451,8 +458,8 @@ class Movie extends Public_Controller
 
 			// Comments enabled can be 'no', 'always', or a strtotime compatable difference string, so "2 weeks"
 			$this->template->set('form_display', (
-				$post['comments_enabled'] === 'always' or
-					($post['comments_enabled'] !== 'no' and time() < strtotime('+'.$post['comments_enabled'], $post['created_on']))
+				$post['commentmovies_enabled'] === 'always' or
+					($post['commentmovies_enabled'] !== 'no' and time() < strtotime('+'.$post['commentmovies_enabled'], $post['created_on']))
 			));
 		}
 

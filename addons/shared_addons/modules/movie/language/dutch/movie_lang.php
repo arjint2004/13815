@@ -33,10 +33,10 @@ $lang['movie:author_name_label'] 		= 'Auteur naam';
 $lang['movie:read_more_label'] 			= 'Lees Meer&nbsp;&raquo;';
 $lang['movie:created_hour']           	= 'Tijd (Uren)';
 $lang['movie:created_minute']       		= 'Tijd (Minuten)';
-$lang['movie:comments_enabled_label']	= 'Reacties ingeschakeld';
+$lang['movie:commentmovies_enabled_label']	= 'Reacties ingeschakeld';
 
 // titles
-$lang['movie:disabled_after'] 			= 'Posting comments after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 			= 'Posting commentmovies after %s has been disabled.'; #translate
 $lang['movie:create_title'] 				= 'Voeg artikel toe';
 $lang['movie:edit_title'] 				= 'Wijzig artikel "%s"';
 $lang['movie:archive_title'] 			= 'Archief';

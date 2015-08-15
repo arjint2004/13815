@@ -32,7 +32,7 @@ $lang['movie:author_name_label'] 		= 'إسم الكاتب';
 $lang['movie:read_more_label'] 			= 'إقرأ المزيد&nbsp;&raquo;';
 $lang['movie:created_hour']                  = 'الوقت (الساعة)';
 $lang['movie:created_minute']                = 'الوقت (الدقيقة)';
-$lang['movie:comments_enabled_label']         = 'إتاحة التعليقات';
+$lang['movie:commentmovies_enabled_label']         = 'إتاحة التعليقات';
 
 // titles
 $lang['movie:create_title'] 			= 'إضافة مقال';

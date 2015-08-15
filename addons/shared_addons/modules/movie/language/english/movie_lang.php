@@ -32,7 +32,7 @@ $lang['movie:author_name_label']              = 'Author name';
 $lang['movie:read_more_label']                = 'Read More&nbsp;&raquo;';
 $lang['movie:created_hour']                   = 'Created on Hour';
 $lang['movie:created_minute']                 = 'Created on Minute';
-$lang['movie:comments_enabled_label']         = 'Comments Enabled';
+$lang['movie:commentmovies_enabled_label']         = 'Comments Enabled';
 
 // titles
 $lang['movie:create_title']                   = 'Add Post';
@@ -44,7 +44,7 @@ $lang['movie:movie_title']					= 'Movie';
 $lang['movie:list_title']					= 'List Posts';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.';
+$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.';
 $lang['movie:no_posts']                      = 'There are no posts.';
 $lang['movie:subscripe_to_rss_desc']          = 'Get posts straight away by subscribing to our RSS feed. You can do this via most popular e-mail clients, or try <a href="http://reader.google.co.uk/">Google Reader</a>.';
 $lang['movie:currently_no_posts']          = 'There are no posts at the moment.';

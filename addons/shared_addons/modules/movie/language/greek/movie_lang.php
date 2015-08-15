@@ -32,7 +32,7 @@ $lang['movie:author_name_label'] 	= 'Όνομα συγγραφέα';
 $lang['movie:read_more_label'] 		= 'Διαβάστε περισσότερα &raquo;';
 $lang['movie:created_hour'] 		= 'Ώρα δημιουργίας';
 $lang['movie:created_minute'] 		= 'Λεπτό δημιουργίας';
-$lang['movie:comments_enabled_label'] 	= 'Σχόλια Ενεργά';
+$lang['movie:commentmovies_enabled_label'] 	= 'Σχόλια Ενεργά';
 
 // titles
 $lang['movie:create_title'] 		= 'Προσθήκη δημοσίευσης';

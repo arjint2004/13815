@@ -62,8 +62,8 @@ class Admin extends Admin_Controller
 			'rules' => 'trim|numeric|required'
 		),
 		array(
-			'field' => 'comments_enabled',
-			'label' => 'lang:movie:comments_enabled_label',
+			'field' => 'commentmovies_enabled',
+			'label' => 'lang:movie:commentmovies_enabled_label',
 			'rules' => 'trim|required'
 		),
 		array(
@@ -207,7 +207,7 @@ class Admin extends Admin_Controller
 				'status'           => 'live',
 				'created_on'       => $created_on,
 				'created'		   => date('Y-m-d H:i:s', $created_on),
-				'comments_enabled' => 'always',
+				'commentmovies_enabled' => 'always',
 				'author_id'        => $this->current_user->id,
 				'type'             => 'markdown',
 				'parsed'           => ('markdown' == 'markdown') ? parse_markdown(utf8_encode($data['DESCRIPTION'])) : '',
@@ -250,7 +250,7 @@ class Admin extends Admin_Controller
 						'created_on' => date('Y-m-d'),
 						'created_on_hour' => date('H'),
 						'created_on_minute' => date('i'),
-						'comments_enabled' => 'always',
+						'commentmovies_enabled' => 'always',
 						'row_edit_id' => '',
 						'btnAction' => 'save'
 			);
@@ -451,7 +451,7 @@ class Admin extends Admin_Controller
 				'status'           => $this->input->post('status'),
 				'created_on'       => $created_on,
 				'created'		   => date('Y-m-d H:i:s', $created_on),
-				'comments_enabled' => $this->input->post('comments_enabled'),
+				'commentmovies_enabled' => $this->input->post('commentmovies_enabled'),
 				'author_id'        => $this->current_user->id,
 				'type'             => $this->input->post('type'),
 				'parsed'           => ($this->input->post('type') == 'markdown') ? parse_markdown($this->input->post('body')) : '',
@@ -596,7 +596,7 @@ class Admin extends Admin_Controller
 				'updated_on'       => $created_on,
 				'created'		   => date('Y-m-d H:i:s', $created_on),
 				'updated'		   => date('Y-m-d H:i:s', $created_on),
-				'comments_enabled' => $this->input->post('comments_enabled'),
+				'commentmovies_enabled' => $this->input->post('commentmovies_enabled'),
 				'author_id'        => $author_id,
 				'type'             => $this->input->post('type'),
 				'parsed'           => ($this->input->post('type') == 'markdown') ? parse_markdown($this->input->post('body')) : '',
@@ -750,7 +750,7 @@ class Admin extends Admin_Controller
 	 */
 	public function delete($id = 0)
 	{
-		$this->load->model('comments/comment_m');
+		$this->load->model('commentmovies/comment_m');
 		$this->load->library('files/files');
 		role_or_die('movie', 'delete_live');
 

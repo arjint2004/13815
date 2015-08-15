@@ -32,7 +32,7 @@ $lang['movie:author_name_label']			= 'Nome do autor';
 $lang['movie:read_more_label']			= 'Leia mais &raquo;';
 $lang['movie:created_hour']				= 'Horário (Hora)';
 $lang['movie:created_minute']			= 'Horário (Minuto)';
-$lang['movie:comments_enabled_label']	= 'Habilitar comentários';
+$lang['movie:commentmovies_enabled_label']	= 'Habilitar comentários';
 
 // titles
 $lang['movie:create_title']				= 'Adicionar artigo';
@@ -44,7 +44,7 @@ $lang['movie:movie_title']				= 'Movie';
 $lang['movie:list_title']				= 'Listar artigos';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
 $lang['movie:no_posts']					= 'Nenhum artigo.';
 $lang['movie:subscripe_to_rss_desc']		= 'Fique por dentro das novidades do movie assinando o nosso feed RSS. Pode fazer isto pelos mais populares leitores de e-mail ou pode experimentar o <a rel="nofollow" href="http://reader.google.com/">Google Reader</a>.';
 $lang['movie:currently_no_posts']		= 'Não existem artigos no momento.';

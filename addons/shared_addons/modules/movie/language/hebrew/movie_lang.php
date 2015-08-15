@@ -43,7 +43,7 @@ $lang['movie:movie_title']                     = 'בלוג';
 $lang['movie:list_title']                     = 'רשימת הפוסטים';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
 $lang['movie:no_posts']                    = 'אין פוסטים.';
 $lang['movie:subscripe_to_rss_desc']          = 'קבל פוסטי ישירות ע"י הרשמה לRSS שלנו. ניתןלעשות זאת בעזרת <a href="http://reader.google.co.uk/">Google Reader</a>.';
 $lang['movie:currently_no_posts']          = 'כרגע אין פוסטים.';

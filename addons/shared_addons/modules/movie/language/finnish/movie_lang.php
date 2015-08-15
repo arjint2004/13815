@@ -37,7 +37,7 @@ $lang['movie:author_name_label']			= 'Tekijän nimi';
 $lang['movie:read_more_label']			= 'Lue lisää&nbsp;&raquo;';
 $lang['movie:created_hour']				= 'Luotiin tunnissa';
 $lang['movie:created_minute']			= 'Luotiin minuutissa';
-$lang['movie:comments_enabled_label']	= 'Kommentit päällä';
+$lang['movie:commentmovies_enabled_label']	= 'Kommentit päällä';
 
 // titles
 $lang['movie:disabled_after']	= 'Kommentointi on otettu pois käytöstä %s jälkeen.';

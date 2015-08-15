@@ -105,13 +105,13 @@
 					</div>
 				</li>
 	
-				<?php if ( ! module_enabled('comments')): ?>
-					<?php echo form_hidden('comments_enabled', 'no'); ?>
+				<?php if ( ! module_enabled('commentmovies')): ?>
+					<?php echo form_hidden('commentmovies_enabled', 'no'); ?>
 				<?php else: ?>
 					<li>
-						<label for="comments_enabled"><?php echo lang('movie:comments_enabled_label');?></label>
+						<label for="commentmovies_enabled"><?php echo lang('movie:commentmovies_enabled_label');?></label>
 						<div class="input">
-							<?php echo form_dropdown('comments_enabled', array(
+							<?php echo form_dropdown('commentmovies_enabled', array(
 								'no' => lang('global:no'),
 								'1 day' => lang('global:duration:1-day'),
 								'1 week' => lang('global:duration:1-week'),
@@ -119,7 +119,7 @@
 								'1 month' => lang('global:duration:1-month'),
 								'3 months' => lang('global:duration:3-months'),
 								'always' => lang('global:duration:always'),
-							), $post->comments_enabled ? $post->comments_enabled : '3 months') ?>
+							), $post->commentmovies_enabled ? $post->commentmovies_enabled : '3 months') ?>
 						</div>
 					</li>
 				<?php endif; ?>

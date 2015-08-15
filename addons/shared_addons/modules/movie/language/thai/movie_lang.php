@@ -42,7 +42,7 @@ $lang['movie:author_name_label']              = 'ชื่อผู้เขี�
 $lang['movie:read_more_label']                = 'อ่านเพิ่มเติม&nbsp;&raquo;';
 $lang['movie:created_hour']                   = 'สร้างเมื่อชั่วโมงที่แล้ว';
 $lang['movie:created_minute']                 = 'สร้างเมื่อนาทีที่แล้ว';
-$lang['movie:comments_enabled_label']         = 'ความคิดเห็นถูกเปิดใช้งาน';
+$lang['movie:commentmovies_enabled_label']         = 'ความคิดเห็นถูกเปิดใช้งาน';
 
 // titles
 $lang['movie:create_title']                   = 'เพิ่มโพสต์';
@@ -54,7 +54,7 @@ $lang['movie:movie_title']					= 'บล็อก';
 $lang['movie:list_title']					= 'รายการโพสต์';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
 $lang['movie:no_posts']                    = 'ไม่มีโพสต์';
 $lang['movie:subscripe_to_rss_desc']          = 'Get posts straight away by subscribing to our RSS feed. You can do this via most popular e-mail clients, or try <a href="http://reader.google.co.uk/">Google Reader</a>.';
 $lang['movie:currently_no_posts']          = 'ไม่มีโพสต์ในขณะนี้';

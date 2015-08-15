@@ -40,7 +40,7 @@ $lang['movie:author_name_label']							= 'Автор';
 $lang['movie:read_more_label']								= 'читать целиком&nbsp;&raquo;';
 $lang['movie:created_hour']									= 'Время (Час)';
 $lang['movie:created_minute']								= 'Время (Минута)';
-$lang['movie:comments_enabled_label']				= 'Комментарии разрешены';
+$lang['movie:commentmovies_enabled_label']				= 'Комментарии разрешены';
 
 // заголовки
 $lang['movie:create_title']									= 'Создать статью';
@@ -52,7 +52,7 @@ $lang['movie:movie_title']										= 'Блог';
 $lang['movie:list_title']										= 'Список статей';
 
 // сообщения
-$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
 $lang['movie:no_posts']											= 'Статьи отсутствуют.';
 $lang['movie:subscripe_to_rss_desc']					= 'Получайте статьи сразу после их публикации, подпишитесь на нашу ленту новостей. Вы можете сделать это с помощью самых популярных программ для чтения электронных писем, или попробуйте <a href="http://reader.google.ru/">Google Reader</a>.';
 $lang['movie:currently_no_posts']						= 'В данный момент новости отсутствуют.';

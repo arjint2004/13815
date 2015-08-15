@@ -32,10 +32,10 @@ $lang['movie:author_name_label']              = 'Forfatter';
 $lang['movie:read_more_label']                = 'Læs mere&nbsp;&raquo;';
 $lang['movie:created_hour']                   = 'Oprettet on time';
 $lang['movie:created_minute']                 = 'Oprettet on minut';
-$lang['movie:comments_enabled_label']         = 'Kommentarer aktiveret';
+$lang['movie:commentmovies_enabled_label']         = 'Kommentarer aktiveret';
 
 // titles
-$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
 $lang['movie:create_title']                   = 'Tilføj opslag';
 $lang['movie:edit_title']                     = 'Redigér opslag "%s"';
 $lang['movie:archive_title']                  = 'Arkivér';

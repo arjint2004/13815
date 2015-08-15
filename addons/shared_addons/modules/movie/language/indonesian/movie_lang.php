@@ -32,7 +32,7 @@ $lang['movie:author_name_label']              = 'Nama penulis';
 $lang['movie:read_more_label']                = 'Selengkapnya&nbsp;&raquo;';
 $lang['movie:created_hour']                   = 'Dibuat pada Jam';
 $lang['movie:created_minute']                 = 'Dibuat pada Menit';
-$lang['movie:comments_enabled_label']         = 'Perbolehkan Komentar';
+$lang['movie:commentmovies_enabled_label']         = 'Perbolehkan Komentar';
 
 // titles
 $lang['movie:create_title']                   = 'Tambah Post';
@@ -44,7 +44,7 @@ $lang['movie:movie_title']					= 'Movie';
 $lang['movie:list_title']					= 'Daftar Post';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
 $lang['movie:no_posts']                    = 'Tidak ada post.';
 $lang['movie:subscripe_to_rss_desc']          = 'Ambil post langsung dengan berlangganan melalui RSS feed kami. Anda dapat melakukannya menggunakan hampir semua e-mail client, atau coba <a href="http://reader.google.co.uk/">Google Reader</a>.';
 $lang['movie:currently_no_posts']          = 'Untuk sementara tidak ada post.';

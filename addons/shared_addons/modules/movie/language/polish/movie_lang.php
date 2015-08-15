@@ -32,7 +32,7 @@ $lang['movie:author_name_label'] 				= 'Imię autora';
 $lang['movie:read_more_label'] 					= 'Czytaj więcej&nbsp;&raquo;';
 $lang['movie:created_hour']               		    	= 'Czas (Godzina)';
 $lang['movie:created_minute']              		    	= 'Czas (Minuta)';
-$lang['movie:comments_enabled_label']         			= 'Komentarze aktywne';
+$lang['movie:commentmovies_enabled_label']         			= 'Komentarze aktywne';
 
 // titles
 $lang['movie:create_title'] 					= 'Dodaj wpis';
@@ -44,7 +44,7 @@ $lang['movie:movie_title'] 					= 'Movie';
 $lang['movie:list_title'] 					= 'Lista wpisów';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
 $lang['movie:no_posts'] 						= 'Nie ma żadnych wpisów.';
 $lang['movie:subscripe_to_rss_desc'] 				= 'Bądź na bieżąco subskrybując nasz kanał RSS. Możesz to zrobić za pomocą popularnych klientów pocztowych, lub skorzystać z <a href="http://reader.google.com/">Google Reader\'a</a>.';
 $lang['movie:currently_no_posts'] 				= 'W tym momencie nie ma żadnych wpisów.';
