@@ -1,49 +1,44 @@
+					<? //print_r($posts); die():?><h2 class="page-heading">Blog Post</h2>
 {{ if posts }}
 
-	{{ posts }}
+	{{ posts }}                    
+                    <!-- News post article-->
+                    <article class="post post--news">
+                        <a href='{{ url }}' class="post__image-link">
+                            {{ image:img }}
+                        </a>
+						
+                        <h1><a href="{{ url }}" class="post__title-link">{{ title }}</a></h1>
+                        <p class="post__date">{{ helper:lang line="blog:posted_label" }} {{ helper:date timestamp=created_on }}</p>
 
-		<div class="post">
+                        <div class="wave-devider"></div>
 
-			<h3><a href="{{ url }}">{{ title }}</a></h3>
+                        <p class="post__text">{{ preview }}</p> 
+			
+						{{ if keywords }}
+                        <div class="tags">
+                                <ul>
+								{{ keywords }}
+                                    <li class="item-wrap"><a href="{{ url:site }}blog/tagged/{{ keyword }}" class="tags__item">{{ keyword }}</a></li>
+                                {{ /keywords }}   
+                                </ul>
+                        </div>
+						{{ endif }}
+                        <div class="devider-huge"></div>
+                    </article> 
+                    <!-- end news post article-->
 
-			<div class="meta">
 
-			<div class="date">
-				{{ helper:lang line="blog:posted_label" }}
-				<span>{{ helper:date timestamp=created_on }}</span>
-			</div>
-
-			{{ if category }}
-			<div class="category">
-				{{ helper:lang line="blog:category_label" }}
-				<span><a href="{{ url:site }}blog/category/{{ category:slug }}">{{ category:title }}</a></span>
-			</div>
-			{{ endif }}
-
-			{{ if keywords }}
-			<div class="keywords">
-				{{ keywords }}
-					<span><a href="{{ url:site }}blog/tagged/{{ keyword }}">{{ keyword }}</a></span>
-				{{ /keywords }}
-			</div>
-			{{ endif }}
-
-			</div>
-
-			<div class="preview">
-			{{ preview }}
-			</div>
-
-			<p><a href="{{ url }}">{{ helper:lang line="blog:read_more_label" }}</a></p>
-
-		</div>
 
 	{{ /posts }}
-
+                    <!--<div class="pagination">
+                        <a href='#' class="pagination__prev">prev</a>
+                        <a href='#' class="pagination__next">next</a>
+                    </div>-->
 	{{ pagination }}
 
 {{ else }}
 	
 	{{ helper:lang line="blog:currently_no_posts" }}
 
-{{ endif }}
+{{ endif }}					
