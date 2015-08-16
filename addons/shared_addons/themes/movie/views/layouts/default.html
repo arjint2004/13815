@@ -6,6 +6,7 @@
 		{{ integration:analytics }}
 	</head>
 	<body>
+
 		<div class="wrapper">
 
         <!-- Header section -->
@@ -41,7 +42,9 @@
 
             </div>
         </header>
-        
+<?if(isset($post[0]['headfoot']) && $post[0]['headfoot']=='home_movie'){?>	
+{{ template:body }}
+<?}else{?>        
         <!-- Search bar -->
         <div class="search-wrapper">
             <div class="container container--add">
@@ -68,6 +71,8 @@
             {{ theme:partial name="sidebar" }}
 
         </section>
-        {{ theme:partial name="footer" }}	
+<? } ?>		
+        {{ theme:partial name="footer" }}
+		
 	</body>
 </html>

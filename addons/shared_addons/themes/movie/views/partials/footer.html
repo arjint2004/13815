@@ -87,6 +87,7 @@
         </div>
 		<? 
 		if(isset($post[0]['headfoot']) && $post[0]['headfoot']=='detail_movie'){?>
+		
 		<!-- JavaScript-->
         <!-- jQuery 1.9.1--> 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -115,7 +116,9 @@
         <!-- Share buttons -->
         <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
         <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525fd5e9061e7ef0"></script>
-
+		
+		<!-- Twitter feed -->
+		{{ theme:js file="external/twitterfeed.js" }}
         <!-- Form element -->
 		{{ theme:js file="external/form-element.js" }}
         <!-- Form validation -->
@@ -127,6 +130,80 @@
                 init_MoviePage();
             });
 		</script>		
+		<?}elseif(isset($post[0]['headfoot']) && $post[0]['headfoot']=='home_movie'){?>
+<!-- JavaScript-->
+        <!-- jQuery 1.9.1--> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="<?=base_url()?>addons/shared_addons/themes/movie/js/external/jquery-1.10.1.min.js"><\/script>')</script>
+        <!-- Migrate --> 
+        {{ theme:js file="external/jquery-migrate-1.2.1.min.js" }}		
+        <!-- Bootstrap 3--> 
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+        <!-- jQuery REVOLUTION Slider -->
+        <script type="text/javascript" src="<?=base_url()?>addons/shared_addons/themes/movie/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+        <script type="text/javascript" src="<?=base_url()?>addons/shared_addons/themes/movie/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+        <!-- Mobile menu -->
+        {{ theme:js file="jquery.mobile.menu.js" }}	
+         <!-- Select -->
+        {{ theme:js file="external/jquery.selectbox-0.2.min.js" }}
+        <!-- Stars rate -->
+        {{ theme:js file="external/jquery.raty.js" }}
+        
+        <!-- Form element -->
+        {{ theme:js file="external/form-element.js" }}
+		
+        <!-- Form validation -->
+        {{ theme:js file="form.js" }}
+
+        <!-- Twitter feed -->
+		{{ theme:js file="external/twitterfeed.js" }}
+        <!-- Custom -->
+        {{ theme:js file="custom.js" }}
+		
+	      <script type="text/javascript">
+              $(document).ready(function() {
+                init_Home();
+              });
+		    </script>		
+		<?}elseif(isset($post[0]['headfoot']) && $post[0]['headfoot']=='blog_detail'){?>
+		<!-- JavaScript-->
+        <!-- jQuery 1.9.1--> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="<?=base_url()?>addons/shared_addons/themes/movie/js/external/jquery-1.10.1.min.js"><\/script>')</script>
+        <!-- Migrate --> 
+        {{ theme:js file="external/jquery-migrate-1.2.1.min.js" }}	
+        <!-- Bootstrap 3--> 
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <!-- Swiper slider -->
+        {{ theme:js file="external/idangerous.swiper.min.js" }}
+
+        <!-- Mobile menu -->
+        {{ theme:js file="jquery.mobile.menu.js" }}	
+         <!-- Select -->
+        {{ theme:js file="external/jquery.selectbox-0.2.min.js" }}
+        <!-- Share buttons -->
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525fd5e9061e7ef0"></script>
+
+        <!-- Twitter feed -->
+        {{ theme:js file="external/twitterfeed.js" }}
+
+        <!-- Form element -->
+        {{ theme:js file="external/form-element.js" }}
+        <!-- Form validation -->
+        {{ theme:js file="external/form-element.js" }}
+
+        <!-- Custom -->
+        {{ theme:js file="custom.js" }}
+        
+        <script type="text/javascript">
+        
+            $(document).ready(function() {
+                init_SinglePage();
+            });		
+		</script>
 		<?}else{?>
 		<!-- JavaScript-->
         <!-- jQuery 1.9.1--> 

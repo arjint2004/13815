@@ -47,6 +47,25 @@ class Movie extends Public_Controller
 	 *
 	 * URIs such as `movie/page/x` also route here.
 	 */
+	public function homec()
+	{
+		$post[0]['headfoot']='home_movie';		
+		$this->template
+			->title($this->module_details['name'])
+			->set_breadcrumb(lang('movie:movie_title'))
+			->set_metadata('og:title', $this->module_details['name'], 'og')
+			->set_metadata('og:type', 'movie', 'og')
+			->set_metadata('og:url', current_url(), 'og')
+			//->set_metadata('og:description', $meta['description'], 'og')
+			//->set_metadata('description', $meta['description'])
+			//->set_metadata('keywords', $meta['keywords'])
+			->set_stream($this->stream->stream_slug, $this->stream->stream_namespace)
+			->set('post', $post)
+			//->set('genre', config_item('genre'))
+			//->set('pagination', $posts['pagination'])
+			->build('home');
+	}
+	
 	public function index()
 	{ 
 		// Get our commentmovie count whil we're at it.
@@ -174,7 +193,7 @@ class Movie extends Public_Controller
 
 		// Set meta description based on post titles
 		$meta = $this->_posts_metadata($posts['entries']);
-
+		
 		$this->template
 			->title($month_year, lang('movie:archive_title'), lang('movie:movie_title'))
 			->set_metadata('description', $month_year.'. '.$meta['description'])

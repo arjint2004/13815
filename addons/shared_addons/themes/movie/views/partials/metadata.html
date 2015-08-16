@@ -37,6 +37,39 @@
 		{{ theme:css file="style3860.css" }}
         <!-- Modernizr -->
 		{{ theme:js file="external/modernizr.custom.js" }}  
+<?}elseif(isset($post[0]['headfoot']) && $post[0]['headfoot']=='home_movie'){?>
+		<!-- Stylesheets -->
+
+        <!-- Mobile menu -->
+        {{ theme:css file="gozha-nav.css" }}
+        <!-- Select -->
+        {{ theme:css file="external/jquery.selectbox.css" }}
+
+        <!-- REVOLUTION BANNER CSS SETTINGS -->
+        <link rel="stylesheet" type="text/css" href="<?=base_url()?>addons/shared_addons/themes/movie/rs-plugin/css/settings.css" media="screen" />
+    
+        <!-- Custom -->
+        {{ theme:css file="style3860.css" }}
+
+
+        <!-- Modernizr --> 
+        {{ theme:js file="external/modernizr.custom.js" }}  
+<?}elseif(isset($post[0]['headfoot']) && $post[0]['headfoot']=='blog_detail'){?>
+    <!-- Stylesheets -->
+        <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+        
+        <!-- Swiper slider -->
+        {{ theme:css file="external/idangerous.swiper.css" }}
+        <!-- Mobile menu -->
+        {{ theme:css file="gozha-nav.css" }}
+        <!-- Select -->
+        {{ theme:css file="external/jquery.selectbox.css" }}
+    
+        <!-- Custom -->
+        {{ theme:css file="style3860.css" }}
+
+        <!-- Modernizr --> 
+        {{ theme:js file="external/modernizr.custom.js" }}  
 <?}else{?>
    <!-- Stylesheets -->
         <!-- jQuery UI -->

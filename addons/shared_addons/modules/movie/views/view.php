@@ -170,6 +170,7 @@
                     </div>-->
 
                     <h2 class="page-heading">comments (<?=$post[0]['commentmovie_count']?>)</h2>
+					<div class="comment-wrapper">
 					<?php if (Settings::get('enable_commentmovies')): ?>
 						<?php //echo lang('commentmovies:title') ?>
 						<?php if ($form_display): ?>
@@ -180,5 +181,6 @@
 						
 						<?php echo $this->commentmovies->display() ?>
 					<?php endif ?>
+					</div>
                     
             </div>
