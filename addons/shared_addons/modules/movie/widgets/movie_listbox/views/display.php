@@ -28,11 +28,14 @@
 								$diwalik="movie--test--dark movie--test--right";
 							break;
 					   }
+					if(file_exists(str_replace("index.php","",$_SERVER['SCRIPT_FILENAME'])."uploads/default/files/".$dtbnr['image']['filename']."")){
+					
+					//echo "<pre>";print_r(str_replace("index.php","",$_SERVER['SCRIPT_FILENAME'])."uploads/default/files/".$dtbnr['image']['filename']."");
 					?>
                         <!-- Movie variant with time -->
                             <div class="movie movie--test <?=$diwalik?>">
                                 <div class="movie__images">
-                                    <a href="movie-page-left.html" class="movie-beta__link">
+                                    <a href="<?=site_url('movie/'.date('Y/m', $dtbnr['created_on']).'/'.$dtbnr['slug']);?>" class="movie-beta__link">
                                         <img src="<?=base_url()?>view.php?image=uploads/default/files/<?=$dtbnr['image']['filename']?>&mode=crop&size=423x423" />
                                     </a>
                                 </div>
@@ -51,5 +54,5 @@
                                 </div>
                             </div>
                          <!-- Movie variant with time -->
-						<? } ?>
+						<? } } ?>
 

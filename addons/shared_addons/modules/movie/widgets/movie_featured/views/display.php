@@ -4,7 +4,7 @@
                  <div class="col-sm-12 change--col">
                     <? foreach($posts['entries'] as $dtbnr){ ?>
 					<div class="movie-beta__item ">
-                        <?=$dtbnr['image']['img']?>
+                        <img src="<?=base_url()?>view.php?image=uploads/default/files/<?=$dtbnr['image']['filename']?>&mode=crop&size=360x600" />
                          <span class="best-rate" onclick="window.location='<?=site_url('movie/'.date('Y/m', $dtbnr['created_on']).'/'.$dtbnr['slug']);?>'" style="cursor:pointer;">Detail</span>
 
                          <ul class="movie-beta__info">

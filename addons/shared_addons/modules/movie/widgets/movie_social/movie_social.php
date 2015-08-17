@@ -1,13 +1,13 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
- * Show a list of movie featured.
+ * Show a list of movie social.
  *
  * @author        Stephen Cozart
  * @author        PyroCMS Dev Team
  * @package       PyroCMS\Core\Modules\Movie\Widgets
  */
-class Widget_Movie_featured extends Widgets
+class Widget_Movie_social extends Widgets
 {
 	public $author = 'Stephen Cozart';
 
@@ -16,9 +16,9 @@ class Widget_Movie_featured extends Widgets
 	public $version = '1.0.0';
 
 	public $title = array(
-		'en' => 'Movie Featured',
-		'br' => 'Featureds do Movie',
-		'pt' => 'Featureds do Movie',
+		'en' => 'Movie Social',
+		'br' => 'Socials do Movie',
+		'pt' => 'Socials do Movie',
 		'el' => 'Κατηγορίες Ιστολογίου',
 		'fr' => 'Catégories du Movie',
 		'ru' => 'Категории Блога',
@@ -27,7 +27,7 @@ class Widget_Movie_featured extends Widgets
 	);
 
 	public $description = array(
-		'en' => 'Show a list of movie featured',
+		'en' => 'Show a list of movie social',
 		'br' => 'Mostra uma lista de navegação com as categorias do Movie',
 		'pt' => 'Mostra uma lista de navegação com as categorias do Movie',
 		'el' => 'Προβάλει την λίστα των κατηγοριών του ιστολογίου σας',
@@ -39,24 +39,17 @@ class Widget_Movie_featured extends Widgets
 
 	public function run()
 	{
-		$this->load->driver('Streams');	
-		$this->row_m->sql['select'][] = "(SELECT COUNT(id) FROM ".
-				$this->db->protect_identifiers('comments', true)." WHERE module='movie'
-				AND is_active='1' AND entry_key='movie:post' AND entry_plural='movie:posts'
-				AND entry_id=".$this->db->protect_identifiers('movie.id', true).") as `comment_count`";
+		/*$this->load->driver('Streams');	
+			'stream'		=> 'b',
 		$posts = $this->streams->entries->get_entries(array(
-			'stream'		=> 'movie',
 			'namespace'		=> 'movies',
-			'limit'			=> 6,
-			'where'			=> "`status` = 'live' AND category_id=2",
+			'limit'			=> 3,
+			'where'			=> "`status` = 'live'",
 			'paginate'		=> 'no',
-			'sort'		    => 'random',
 			'pag_base'		=> site_url('movie/page'),
 			'pag_segment'   => 3
 		));
-		$rtn=array('posts' => $posts,'tenlast' => $tenlast,'cmsn' => $cmsn);
-
-		return $rtn;
+		$rtn=array('posts' => $posts,'tenlast' => $tenlast,'cmsn' => $cmsn);*/
 	}
 
 }

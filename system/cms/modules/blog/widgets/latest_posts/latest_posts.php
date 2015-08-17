@@ -73,12 +73,19 @@ class Widget_Latest_posts extends Widgets
 		$options['limit'] = ( ! empty($options['limit'])) ? $options['limit'] : 5;
 
 		// retrieve the records using the blog module's model
-		$blog_widget = $this->blog_m
-			->limit($options['limit'])
-			->get_many_by(array('status' => 'live'));
+				$this->load->driver('Streams');	
+		$posts = $this->streams->entries->get_entries(array(
+			'stream'		=> 'blog',
+			'namespace'		=> 'blogs',
+			'limit'			=> $options['limit'],
+			'where'			=> "`status` = 'live'",
+			'paginate'		=> 'no',
+			'pag_base'		=> site_url('movie/page'),
+			'pag_segment'   => 3
+		));
 
 		// returns the variables to be used within the widget's view
-		return array('blog_widget' => $blog_widget);
+		return array('blog_widget' => $posts);
 	}
 
 }

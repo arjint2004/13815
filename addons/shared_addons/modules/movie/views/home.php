@@ -2,36 +2,13 @@
         <!-- Main content -->
         <section class="container">
 			{{ widgets:area slug="container" }}
-            
-
             <h2 id='target' class="page-heading heading--outcontainer">Now in the cinema</h2>
 
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-8 col-md-9">					
                     {{ widgets:area slug="bottom" }}
-                        <div class="row">
-                            <div class="social-group">
-                              <div class="col-sm-6 col-md-4 col-sm-push-6 col-md-push-4">
-                                    <div class="social-group__head">Join <br>our social groups</div>
-                                    <div class="social-group__content">A lot of fun, discussions, queezes and contests among members. <br class="hidden-xs"><br>Always be first to know about best offers from cinemas and our partners</div>
-                                </div>
 
-                                <div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-4">
-                                     <div class="facebook-group">
-
-                                        <iframe class="fgroup" src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fthemeforest&width=240&height=330&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:240px; height:330px;" allowTransparency="true"></iframe>
-                                    </div>
-                                </div>
-                                
-                                <div class="clearfix visible-sm"></div>
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="twitter-group">
-                                        <div id="twitter-feed"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 						
                     <aside class="col-sm-4 col-md-3">
@@ -42,58 +19,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-12">
-                <h2 class="page-heading">Latest news</h2>
-
-                <div class="col-sm-4 similar-wrap col--remove">
-                    <div class="post post--preview post--preview--wide">
-                        <div class="post__image">
-                            <img alt='' src="<?=base_url()?>addons/shared_addons/themes/movie/images/client-photo/post-thor.jpg">
-                            <div class="social social--position social--hide">
-                                <span class="social__name">Share:</span>
-                                <a href='#' class="social__variant social--first fa fa-facebook"></a>
-                                <a href='#' class="social__variant social--second fa fa-twitter"></a>
-                                <a href='#' class="social__variant social--third fa fa-vk"></a>
-                            </div>
-                        </div>
-                        <p class="post__date">22 October 2013 </p>
-                        <a href="single-page-left.html" class="post__title">"Thor: The Dark World" - World Premiere</a>
-                        <a href="single-page-left.html" class="btn read-more post--btn">read more</a>
-                    </div>
-                </div>
-                <div class="col-sm-4 similar-wrap col--remove">
-                    <div class="post post--preview post--preview--wide">
-                        <div class="post__image">
-                            <img alt='' src="<?=base_url()?>addons/shared_addons/themes/movie/images/client-photo/post-annual.jpg">
-                            <div class="social social--position social--hide">
-                                <span class="social__name">Share:</span>
-                                <a href='#' class="social__variant social--first fa fa-facebook"></a>
-                                <a href='#' class="social__variant social--second fa fa-twitter"></a>
-                                <a href='#' class="social__variant social--third fa fa-vk"></a>
-                            </div>
-                        </div>
-                        <p class="post__date">22 October 2013 </p>
-                        <a href="single-page-left.html" class="post__title">30th Annual Night Of Stars Presented By The Fashion Group International</a>
-                        <a href="single-page-left.html" class="btn read-more post--btn">read more</a>
-                    </div>
-                </div>
-                <div class="col-sm-4 similar-wrap col--remove">
-                    <div class="post post--preview post--preview--wide">
-                        <div class="post__image">
-                            <img alt='' src="<?=base_url()?>addons/shared_addons/themes/movie/images/client-photo/post-awards.jpg">
-                            <div class="social social--position social--hide">
-                                <span class="social__name">Share:</span>
-                                <a href='#' class="social__variant social--first fa fa-facebook"></a>
-                                <a href='#' class="social__variant social--second fa fa-twitter"></a>
-                                <a href='#' class="social__variant social--third fa fa-vk"></a>
-                            </div>
-                        </div>
-                        <p class="post__date">22 October 2013 </p>
-                        <a href="single-page-left.html" class="post__title">Hollywood Film Awards 2013</a>
-                        <a href="single-page-left.html" class="btn read-more post--btn">read more</a>
-                    </div>
-                </div>
-            </div>
+            {{ widgets:area slug="latestpost" }}
                 
         </section>
         
