@@ -2395,3 +2395,4 @@ ERROR - 2015-08-17 18:52:10 --> Severity: Notice  --> Undefined index: body D:\w
 ERROR - 2015-08-17 18:52:10 --> Severity: Notice  --> Undefined index: comment_count D:\webdevel\indoCPA\agcmovie2\trunk\addons\shared_addons\modules\movie\views\view.php 172
 ERROR - 2015-08-17 18:52:10 --> Severity: Notice  --> Undefined index: comments_enabled D:\webdevel\indoCPA\agcmovie2\trunk\addons\shared_addons\modules\movie\views\view.php 179
 ERROR - 2015-08-17 18:52:10 --> Severity: Notice  --> Undefined index: South Korea D:\webdevel\indoCPA\agcmovie2\trunk\system\cms\modules\streams_core\field_types\country\field.country.php 86
+ERROR - 2015-08-17 18:55:34 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
