@@ -38,8 +38,9 @@
 |
 */
 
-$route['default_controller']                = 'movie';
-$route['404_override']                      = 'movie';
+$route['default_controller']                = 'movie/homec';
+$route['home']                				= 'movie/homec';
+$route['404_override']                      = 'movie/404';
 
 $route['admin/help/([a-zA-Z0-9_-]+)']       = 'admin/help/$1';
 $route['admin/([a-zA-Z0-9_-]+)/(:any)']	    = '$1/admin/$2';

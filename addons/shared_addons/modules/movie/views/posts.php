@@ -32,7 +32,7 @@
                                 <li class="item-wrap"><a href="#" class="tags__item item-active" data-filter='all'>all</a></li>
                                 <li class="item-wrap"><a href="#" class="tags__item" data-filter='release'>release date</a></li>
                                 <li class="item-wrap"><a href="#" class="tags__item" data-filter='popularity'>popularity</a></li>
-                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='commentmovies'>commentmovies</a></li>
+                                <li class="item-wrap"><a href="#" class="tags__item" data-filter='comments'>comments</a></li>
                                 <li class="item-wrap"><a href="#" class="tags__item" data-filter='ending'>ending soon</a></li>
                             </ul>
                     </div>

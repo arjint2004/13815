@@ -32,7 +32,7 @@ $lang['movie:author_name_label']              = 'Szerző neve';
 $lang['movie:read_more_label']                = 'Tovább&nbsp;&raquo;';
 $lang['movie:created_hour']                   = 'Létrehozva pár órája';
 $lang['movie:created_minute']                 = 'Létrehozva pár perce';
-$lang['movie:commentmovies_enabled_label']         = 'Hozzászólás engedélyezése';
+$lang['movie:comments_enabled_label']         = 'Hozzászólás engedélyezése';
 
 // titles
 $lang['movie:create_title']                   = 'Bejegyzés hozzáadása';
@@ -44,7 +44,7 @@ $lang['movie:movie_title']                     = 'Movie';
 $lang['movie:list_title']                     = 'Bejegyzések listája';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
 $lang['movie:no_posts']                       = 'Nincs bejegyzés.';
 $lang['movie:subscripe_to_rss_desc']          = 'A bejegyzést jelentesd meg saját RSS-en. Ezt meg lehet tenni az ismertebb levelezőkkel vagy a <a href="http://reader.google.co.uk/">Google Reader</a>rel.';
 $lang['movie:currently_no_posts']             = 'Ebben a pillanatban még nincs bejegyzés.';

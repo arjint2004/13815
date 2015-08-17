@@ -42,7 +42,7 @@ $lang['movie:author_name_label'] 				= '作者名稱';
 $lang['movie:read_more_label'] 					= '閱讀更多&nbsp;&raquo;';
 $lang['movie:created_hour']                  = '時間 (時)';
 $lang['movie:created_minute']                = '時間 (分)';
-$lang['movie:commentmovies_enabled_label']         = '允許回應';
+$lang['movie:comments_enabled_label']         = '允許回應';
 
 // titles
 $lang['movie:create_title'] 				= '新增文章';

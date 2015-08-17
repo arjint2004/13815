@@ -22,7 +22,7 @@
                             <p class="movie__option"><strong>ID IMDB: </strong><?=$post[0]['id_imdb']?></p>
                             <p class="movie__option"><strong>ID TMDB: </strong><?=$post[0]['id_tmdb']?></p>
 
-                            <a href="#" class="comment-link">Comments:  <?=$post[0]['commentmovie_count']?></a>
+                            <a href="#" class="comment-link">Comments:  <?=$post[0]['comment_count']?></a>
 
                             <div class="movie__btns">
                                 <a href="#" class="btn btn-md btn--warning">book a ticket for this movie</a>
@@ -169,17 +169,17 @@
                         <div id='cimenas-map'></div> 
                     </div>-->
 
-                    <h2 class="page-heading">comments (<?=$post[0]['commentmovie_count']?>)</h2>
+                    <h2 class="page-heading">comments (<?=$post[0]['comment_count']?>)</h2>
 					<div class="comment-wrapper">
-					<?php if (Settings::get('enable_commentmovies')): ?>
-						<?php //echo lang('commentmovies:title') ?>
+					<?php if (Settings::get('enable_comments')): ?>
+						<?php //echo lang('comments:title') ?>
 						<?php if ($form_display): ?>
-							<?php echo $this->commentmovies->form() ?>
+							<?php echo $this->comments->form() ?>
 						<?php else: ?>
-						<?php echo sprintf(lang('movie:disabled_after'), strtolower(lang('global:duration:'.str_replace(' ', '-', $post[0]['commentmovies_enabled'])))) ?>
+						<?php echo sprintf(lang('movie:disabled_after'), strtolower(lang('global:duration:'.str_replace(' ', '-', $post[0]['comments_enabled'])))) ?>
 						<?php endif ?>
 						
-						<?php echo $this->commentmovies->display() ?>
+						<?php echo $this->comments->display() ?>
 					<?php endif ?>
 					</div>
                     

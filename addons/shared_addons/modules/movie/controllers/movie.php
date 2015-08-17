@@ -68,11 +68,11 @@ class Movie extends Public_Controller
 	
 	public function index()
 	{ 
-		// Get our commentmovie count whil we're at it.
+		// Get our comment count whil we're at it.
 		$this->row_m->sql['select'][] = "(SELECT COUNT(id) FROM ".
-				$this->db->protect_identifiers('commentmovies', true)." WHERE module='movie'
+				$this->db->protect_identifiers('comments', true)." WHERE module='movie'
 				AND is_active='1' AND entry_key='movie:post' AND entry_plural='movie:posts'
-				AND entry_id=".$this->db->protect_identifiers('movie.id', true).") as `commentmovie_count`";
+				AND entry_id=".$this->db->protect_identifiers('movie.id', true).") as `comment_count`";
 
 		// Get the latest movie posts
 		$posts = $this->streams->entries->get_entries(array(
@@ -220,9 +220,9 @@ class Movie extends Public_Controller
 			redirect('movie');
 		}
 		$this->row_m->sql['select'][] = "(SELECT COUNT(id) FROM ".
-				$this->db->protect_identifiers('commentmovies', true)." WHERE module='movie'
+				$this->db->protect_identifiers('comments', true)." WHERE module='movie'
 				AND is_active='1' AND entry_key='movie:post' AND entry_plural='movie:posts'
-				AND entry_id=".$this->db->protect_identifiers('movie.id', true).") as `commentmovie_count`";
+				AND entry_id=".$this->db->protect_identifiers('movie.id', true).") as `comment_count`";
 		$params = array(
 			'stream'		=> 'movie',
 			'namespace'		=> 'movies',
@@ -463,11 +463,11 @@ class Movie extends Public_Controller
 			$this->template->set_metadata('article:tag', $keyword, 'og');
 		}
 
-		// If commentmovies are enabled, go fetch them all
-		if (Settings::get('enable_commentmovies'))
+		// If comments are enabled, go fetch them all
+		if (Settings::get('enable_comments'))
 		{
 			// Load Comments so we can work out what to do with them
-			$this->load->library('commentmovies/commentmovies', array(
+			$this->load->library('comments/comments', array(
 				'entry_id' => $post['id'],
 				'entry_title' => $post['title'],
 				'module' => 'movie',
@@ -477,8 +477,8 @@ class Movie extends Public_Controller
 
 			// Comments enabled can be 'no', 'always', or a strtotime compatable difference string, so "2 weeks"
 			$this->template->set('form_display', (
-				$post['commentmovies_enabled'] === 'always' or
-					($post['commentmovies_enabled'] !== 'no' and time() < strtotime('+'.$post['commentmovies_enabled'], $post['created_on']))
+				$post['comments_enabled'] === 'always' or
+					($post['comments_enabled'] !== 'no' and time() < strtotime('+'.$post['comments_enabled'], $post['created_on']))
 			));
 		}
 

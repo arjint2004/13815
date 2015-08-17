@@ -32,7 +32,7 @@ $lang['movie:author_name_label']              = 'Ime avtorja';
 $lang['movie:read_more_label']                = 'Preberi vse&nbsp;&raquo;';
 $lang['movie:created_hour']                   = 'Ustvarjeno ura';
 $lang['movie:created_minute']                 = 'Ustvarjeno minuta';
-$lang['movie:commentmovies_enabled_label']         = 'Komentaji omogočeni';
+$lang['movie:comments_enabled_label']         = 'Komentaji omogočeni';
 
 // titles
 $lang['movie:create_title']                   = 'Dodaj prispevek';
@@ -44,7 +44,7 @@ $lang['movie:movie_title']                     = 'Movie';
 $lang['movie:list_title']                     = 'Seznam prispevkov';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
 $lang['movie:no_posts']                    = 'Trenutno še ni prispevkov.';
 $lang['movie:subscripe_to_rss_desc']          = 'Pridite do prispevkov v najkrajšem možnem času tako da se prijavite na RSS podajalca. To lahko storite preko popularnega email programa ali poizkusite  <a href="http://reader.google.co.uk/">Google Reader</a>.';
 $lang['movie:currently_no_posts']          = 'Ta trenutek ni prispevkov';

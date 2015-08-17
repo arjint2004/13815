@@ -16,7 +16,7 @@
 							<input type="text" name="website" maxlength="40" value="<?php echo $comment['website'] ?>" />
 
 						<?php endif ?>
-							<label class="comment-form__info"><?php// echo lang('comments:message_label') ?><h6><?php echo lang('comments:your_comment') ?>, 250 characters left:</h6></label>
+							<label class="comment-form__info"><?php // echo lang('comments:message_label') ?><h6><?php echo lang('comments:your_comment') ?>, 250 characters left:</h6></label>
                             <textarea class="comment-form__text" name="comment" placeholder='Add you comment here'></textarea>
                             <label class="comment-form__info"> </label>
 							<?php //echo form_submit('submit', lang('comments:send_label')) ?>

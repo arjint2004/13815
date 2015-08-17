@@ -32,7 +32,7 @@ $lang['movie:author_name_label'] 		= 'Autor';
 $lang['movie:read_more_label'] 			= 'Čtěte dále';
 $lang['movie:created_hour']                      = 'Vytvořeno v hodině';
 $lang['movie:created_minute']                    = 'Vytvořeno v minutě';
-$lang['movie:commentmovies_enabled_label']         = 'Komentáře povoleny';
+$lang['movie:comments_enabled_label']         = 'Komentáře povoleny';
 
 // titles
 $lang['movie:create_title'] 			= 'Přidat článek';
@@ -44,7 +44,7 @@ $lang['movie:movie_title'] 			= 'Novinky';
 $lang['movie:list_title'] 			= 'Seznam článků';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
 $lang['movie:no_posts'] 			= 'Nejsou zde žádné články.';
 $lang['movie:subscripe_to_rss_desc'] 		= 'Dostávejte články rovnou pomocí RSS. Můžete použít populární e-mailové klienty nebo zkuste <a href="http://reader.google.cz/">Google Reader</a>.';
 $lang['movie:currently_no_posts'] 		= 'Nejsou zde žádné články.';

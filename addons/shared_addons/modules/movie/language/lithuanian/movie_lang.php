@@ -34,7 +34,7 @@ $lang['movie:author_name_label']             = 'Autoriaus vardas';
 $lang['movie:read_more_label']               = 'Plačiau&nbsp;&raquo;';
 $lang['movie:created_hour']                  = 'Sukurta valandą';
 $lang['movie:created_minute']                = 'Sukurta minutę';
-$lang['movie:commentmovies_enabled_label']        = 'Įjungti komentarus?';
+$lang['movie:comments_enabled_label']        = 'Įjungti komentarus?';
 
 // titles
 $lang['movie:create_title']                  = 'Pridėti įrašą';

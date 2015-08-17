@@ -43,7 +43,7 @@ $lang['movie:author_name_label']              = 'Tên tác giả';
 $lang['movie:read_more_label']                = 'Đọc thêm&nbsp;&raquo;';
 $lang['movie:created_hour']                   = 'Giờ tạo';
 $lang['movie:created_minute']                 = 'Phút tạo';
-$lang['movie:commentmovies_enabled_label']         = 'Cho phép phản hồi';
+$lang['movie:comments_enabled_label']         = 'Cho phép phản hồi';
 
 // titles
 $lang['movie:create_title']                   = 'Thêm bài viết';
@@ -54,7 +54,7 @@ $lang['movie:rss_posts_title']             = 'Các bài viết cho %s';
 $lang['movie:movie_title']                     = 'Movie';
 
 // messages
-$lang['movie:disabled_after'] 				= 'Posting commentmovies after %s has been disabled.'; #translate
+$lang['movie:disabled_after'] 				= 'Posting comments after %s has been disabled.'; #translate
 $lang['movie:no_posts']                    = 'Không có bài viết nào.';
 $lang['movie:subscripe_to_rss_desc']          = 'Hãy sử dụng RSS Feed để nhận những bài viết mới nhất. Bạn có thể sử dụng nhiều chương trình khác nhau, hoặc sử dụng <a href="http://reader.google.co.uk/">Google Reader</a>.';
 $lang['movie:currently_no_posts']          = 'Không có bài viết nào.';

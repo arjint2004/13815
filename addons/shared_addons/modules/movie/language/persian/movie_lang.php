@@ -32,7 +32,7 @@ $lang['movie:author_name_label']              = 'نام نویسنده';
 $lang['movie:read_more_label']                = 'مشاهده جزئیات';
 $lang['movie:created_hour']                   = 'ایجاد شده در ساعت';
 $lang['movie:created_minute']                 = 'ایجاد شده در دقیقه ی ';
-$lang['movie:commentmovies_enabled_label']         = 'فعال کردن کامنت ها';
+$lang['movie:comments_enabled_label']         = 'فعال کردن کامنت ها';
 
 // titles
 $lang['movie:create_title']                   = 'پست جدید';

@@ -34,7 +34,7 @@ $lang['movie:author_name_label'] 		= 'Nome autore';
 $lang['movie:read_more_label'] 			= 'Leggi tutto&nbsp;&raquo;';
 $lang['movie:created_hour']                  = 'Time (Ora)'; 
 $lang['movie:created_minute']                = 'Time (Minuto)';
-$lang['movie:commentmovies_enabled_label']         = 'Commenti abilitati';
+$lang['movie:comments_enabled_label']         = 'Commenti abilitati';
 
 // titles
 $lang['movie:create_title'] 			= 'Aggiungi un articolo';

@@ -32,7 +32,7 @@ $lang['movie:author_name_label']              = 'Autor';
 $lang['movie:read_more_label']                = 'Mehr lesen&nbsp;&raquo;';
 $lang['movie:created_hour']                   = 'Erstellt zur Stunde';
 $lang['movie:created_minute']                 = 'Erstellt zur Minute';
-$lang['movie:commentmovies_enabled_label']         = 'Kommentare aktiv';
+$lang['movie:comments_enabled_label']         = 'Kommentare aktiv';
 
 // titles
 $lang['movie:create_title']                   = 'Artikel erstellen';

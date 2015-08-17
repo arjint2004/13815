@@ -43,19 +43,19 @@
 
 {{ /post }}
 
-<?php if (Settings::get('enable_commentmovies')): ?>
+<?php if (Settings::get('enable_comments')): ?>
 
-<div id="commentmovies">
+<div id="comments">
 
-	<div id="existing-commentmovies">
-		<h4><?php echo lang('commentmovies:title') ?></h4>
-		<?php echo $this->commentmovies->display() ?>
+	<div id="existing-comments">
+		<h4><?php echo lang('comments:title') ?></h4>
+		<?php echo $this->comments->display() ?>
 	</div>
 
 	<?php if ($form_display): ?>
-		<?php echo $this->commentmovies->form() ?>
+		<?php echo $this->comments->form() ?>
 	<?php else: ?>
-	<?php echo sprintf(lang('movie:disabled_after'), strtolower(lang('global:duration:'.str_replace(' ', '-', $post[0]['commentmovies_enabled'])))) ?>
+	<?php echo sprintf(lang('movie:disabled_after'), strtolower(lang('global:duration:'.str_replace(' ', '-', $post[0]['comments_enabled'])))) ?>
 	<?php endif ?>
 </div>
 

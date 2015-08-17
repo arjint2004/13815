@@ -358,7 +358,7 @@ function init_Home() {
     $('.score').raty({
         width:130, 
         score: 0,
-        path: 'images/rate/',
+        path: base_url+'addons/shared_addons/themes/movie/images/rate/',
         starOff : 'star-off.svg',
         starOn  : 'star-on.svg' 
     });
