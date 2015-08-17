@@ -15,8 +15,8 @@
                       <input type="text" id="datepicker" value='03/10/2014' class="datepicker__input">
                     </div>
 
-                    <form class="select select--film-category" method='get'>
-                          <select name="genre" class="select__sort" tabindex="0">
+                    <form class="select select--film-category" action="<?=base_url('movie/index')?>" method='get'>
+                          <select name="genre" class="select__sort" onchange="return submit;" tabindex="0">
 							<? foreach($genre as $datagenre){?>
                             <option value="<?=$datagenre?>"><?=$datagenre?></option>
 							<? } ?>

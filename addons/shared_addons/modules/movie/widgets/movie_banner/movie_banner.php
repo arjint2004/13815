@@ -55,8 +55,9 @@ class Widget_Movie_banner extends Widgets
 			'stream'		=> 'movie',
 			'namespace'		=> 'movies',
 			'limit'			=> 10,
-			'where'			=> "`status` = 'live'",
-			'order_by'			=> "release_date",
+			'where'			=> "`status` = 'live' AND date(release_date)<".date('Y-m-d')."",
+			'order_by'		=> "release_date",
+			'sort'			=> "desc",
 			'paginate'		=> 'no',
 			'pag_base'		=> site_url('movie/page'),
 			'pag_segment'   => 3
