@@ -209,6 +209,18 @@ class Blog extends Public_Controller
 		$data = $this->streams->entries->get_entries($params);
 		$post = (isset($data['entries'][0])) ? $data['entries'][0] : null;
 		$post['headfoot']='blog_detail';
+		
+		
+		$post['smiliar'] = $this->streams->entries->get_entries(array(
+			'stream'		=> 'blog',
+			'namespace'		=> 'blogs',
+			'limit'			=> 3,
+			'where'			=> "`status` = 'live'",
+			'sort'			=> "random",
+			'paginate'		=> 'no',
+			'pag_base'		=> site_url('movie/page'),
+			'pag_segment'   => 3
+		));
 		if ( ! $post or ($post['status'] !== 'live' and ! $this->ion_auth->is_admin()))
 		{
 			redirect('blog');

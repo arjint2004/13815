@@ -9,7 +9,7 @@
                           <div class="swiper-wrapper">
                               <!--First Slide-->
                               <div class="swiper-slide" data-text='{{ title }}'> 
-                                {{image:img}}
+                                 <img src="<?=base_url()?>view.php?image=uploads/default/files/{{image:filename}}&mode=crop&size=878x335" alt=""/>
                               </div>
                               
                               <!--Second Slide-->
@@ -57,58 +57,29 @@
                         </div>
                     </div>
                 </div>
-
+				{{ /post }}
+				
+				
                 <h2 class="page-heading">Similar posts</h2>
 
+                <? foreach($post[0]['smiliar']['entries'] as $smiliar){?>
                 <div class="col-sm-4 col--remove">
                     <div class="post post--preview">
                         <div class="post__image">
-                            <img alt='' src="<?=base_url()?>addons/shared_addons/themes/movie/images/client-photo/post-thor.jpg">
-                            <div class="social social--position social--hide">
+							<img src="<?=base_url()?>view.php?image=uploads/default/files/<?=$smiliar['image']['filename']?>&mode=crop&size=270x330" alt=""/>
+                            <!--<div class="social social--position social--hide">
                                 <span class="social__name">Share:</span>
                                 <a href='#' class="social__variant social--first fa fa-facebook"></a>
                                 <a href='#' class="social__variant social--second fa fa-twitter"></a>
                                 <a href='#' class="social__variant social--third fa fa-vk"></a>
-                            </div>
+                            </div>-->
                         </div>
-                        <p class="post__date">22 October 2013 </p>
-                        <a href="#" class="post__title">"Thor: The Dark World" - World Premiere</a>
-                        <a href="#" class="btn read-more post--btn">read more</a>
+                        <p class="post__date"> <?=date('F j, Y',$smiliar['created_date'])?> </p>
+                        <a href="<?=site_url('blog/'.date('Y/m', $smiliar['created_on']).'/'.$smiliar['slug'])?>" class="post__title"><?=$smiliar['title']?> <?=date('Y',$smiliar['created_date'])?></a>
+                        <a href="<?=site_url('blog/'.date('Y/m', $smiliar['created_on']).'/'.$smiliar['slug'])?>" class="btn read-more post--btn">read more</a>
                     </div>
                 </div>
-                <div class="col-sm-4 col--remove">
-                    <div class="post post--preview">
-                        <div class="post__image">
-                            <img alt='' src="<?=base_url()?>addons/shared_addons/themes/movie/images/client-photo/post-annual.jpg">
-                            <div class="social social--position social--hide">
-                                <span class="social__name">Share:</span>
-                                <a href='#' class="social__variant social--first fa fa-facebook"></a>
-                                <a href='#' class="social__variant social--second fa fa-twitter"></a>
-                                <a href='#' class="social__variant social--third fa fa-vk"></a>
-                            </div>
-                        </div>
-                        <p class="post__date">22 October 2013 </p>
-                        <a href="#" class="post__title">30th Annual Night Of Stars Presented By The Fashion ...</a>
-                        <a href="#" class="btn read-more post--btn">read more</a>
-                    </div>
-                </div>
-                <div class="col-sm-4 col--remove">
-                    <div class="post post--preview">
-                        <div class="post__image">
-                            <img alt='' src="<?=base_url()?>addons/shared_addons/themes/movie/images/client-photo/post-awards.jpg">
-                            <div class="social social--position social--hide">
-                                <span class="social__name">Share:</span>
-                                <a href='#' class="social__variant social--first fa fa-facebook"></a>
-                                <a href='#' class="social__variant social--second fa fa-twitter"></a>
-                                <a href='#' class="social__variant social--third fa fa-vk"></a>
-                            </div>
-                        </div>
-                        <p class="post__date">22 October 2013 </p>
-                        <a href="#" class="post__title">Hollywood Film Awards 2013</a>
-                        <a href="#" class="btn read-more post--btn">read more</a>
-                    </div>
-                </div>
-		{{ /post }}
+				<? } ?>
                 <div class="clearfix"></div>
                     <h2 class="page-heading">comments (<?=$post[0]['commentmovie_count']?>)</h2>
 					<div class="comment-wrapper">

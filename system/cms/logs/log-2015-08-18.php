@@ -1,0 +1,12 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2015-08-18 03:42:51 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
+ERROR - 2015-08-18 03:44:32 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
+ERROR - 2015-08-18 03:45:10 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
+ERROR - 2015-08-18 03:45:11 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
+ERROR - 2015-08-18 03:45:12 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
+ERROR - 2015-08-18 03:45:12 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
+ERROR - 2015-08-18 03:45:13 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
+ERROR - 2015-08-18 03:45:13 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
+ERROR - 2015-08-18 03:45:15 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
+ERROR - 2015-08-18 04:01:17 --> Severity: Warning  --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Movie' does not have a method '404' D:\webdevel\indoCPA\agcmovie2\trunk\system\codeigniter\core\CodeIgniter.php 355
