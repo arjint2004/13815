@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2015 at 06:55 PM
+-- Generation Time: Aug 18, 2015 at 06:36 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -271,7 +271,10 @@ INSERT INTO `default_ci_sessions` (`session_id`, `ip_address`, `user_agent`, `la
 ('ad6de5c82e7137ac6d7d65f9416609d8', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0', 1439818511, 'a:5:{s:5:"email";s:20:"arjint2004@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
 ('159f467e71c6d644c0e14ebec2e37c5a', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0', 1439819689, 'a:6:{s:8:"username";s:5:"admin";s:5:"email";s:20:"arjint2004@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
 ('d8206de2ea33b5c5fb42a044c88cf873', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0', 1439821225, 'a:5:{s:5:"email";s:20:"arjint2004@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
-('924b8fd38f2b9330f816387ffb6043d7', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0', 1439823123, 'a:5:{s:5:"email";s:20:"arjint2004@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}');
+('0dd77e989e88e4e343c32a3d3a35b174', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0', 1439823960, 'a:5:{s:5:"email";s:20:"arjint2004@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
+('77f8001c3fa0c576f3bf381669c7da8e', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0', 1439854967, 'a:5:{s:5:"email";s:20:"arjint2004@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
+('eda4e70b1ecf5a9d5a541b698af5e1f5', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0', 1439855071, 'a:5:{s:5:"email";s:20:"arjint2004@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}'),
+('c851d28725ca1b0104170a0c48c625eb', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0', 1439863651, 'a:5:{s:5:"email";s:20:"arjint2004@gmail.com";s:2:"id";s:1:"1";s:7:"user_id";s:1:"1";s:8:"group_id";s:1:"1";s:5:"group";s:5:"admin";}');
 
 -- --------------------------------------------------------
 
@@ -7506,7 +7509,7 @@ CREATE TABLE IF NOT EXISTS `default_users` (
 --
 
 INSERT INTO `default_users` (`id`, `email`, `password`, `salt`, `group_id`, `ip_address`, `active`, `activation_code`, `created_on`, `last_login`, `username`, `forgotten_password_code`, `remember_code`) VALUES
-(1, 'arjint2004@gmail.com', 'fd67e77a6a17a070e1b70a70ab53162668eaf9d7', '50404', 1, '', 1, '', 1439087675, 1439819689, 'admin', NULL, '15768982c12bed3e30b740c46506904336aede28');
+(1, 'arjint2004@gmail.com', 'fd67e77a6a17a070e1b70a70ab53162668eaf9d7', '50404', 1, '', 1, '', 1439087675, 1439855110, 'admin', NULL, '15768982c12bed3e30b740c46506904336aede28');
 
 -- --------------------------------------------------------
 
