@@ -41,7 +41,7 @@
                                 </div>
 
                                 <div class="movie__info">
-                                    <a href='movie-page-left.html' class="movie__title"><?=$dtbnr['title']?> (<?=date('Y',$dtbnr['img'])?>)  </a>
+                                    <a href='movie-page-left.html' class="movie__title"><?=$dtbnr['title']?> (<?=date('Y',$dtbnr['release_date'])?>)  </a>
 
                                     <p class="movie__time"><?=$dtbnr['runtime']?> min</p>
 
