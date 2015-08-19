@@ -84,9 +84,9 @@
 				?>
 
                 
-                <div class="coloum-wrapper">
+                <!--<div class="coloum-wrapper">
                     <div class="pagination paginatioon--full">
                             <a href='#' class="pagination__prev">prev</a>
                             <a href='#' class="pagination__next">next</a>
                     </div>
-                </div>
+                </div>-->

@@ -72,6 +72,16 @@
             $('.overlay').removeClass('close');}, 500);
     });
 
+
+								$('a.btn-md').click(function(e){ 
+									$('form#searchhome').submit();
+								});
+								$('a.mega-select__filter').click(function(e){ 
+									$('input#inputsc').remove();
+									$('form#searchhome').append("<input type='hidden' name='searchtype' value='"+$(this).attr('id')+"' id='inputsc' />");
+								});
+
+	
 function init_Elements () {
     "use strict";
 

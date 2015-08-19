@@ -9976,3 +9976,18 @@ a.asbdx:hover{
 ul.sbOptions{
 	max-height:none !important;
 }
+
+	
+div.pagination ul{
+	
+}	
+div.pagination ul li{
+	border: 1px solid #ccc;
+	display: inline-block;
+	margin: 20px 5px;
+	text-align: center;
+	width: 25px;	
+}	
+div.pagination ul li a{
+	
+}

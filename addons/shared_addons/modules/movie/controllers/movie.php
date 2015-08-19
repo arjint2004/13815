@@ -66,7 +66,75 @@ class Movie extends Public_Controller
 			//->set('pagination', $posts['pagination'])
 			->build('home');
 	}
-	
+
+	public function search()
+	{
+		$like="";
+		if(isset($_POST['searchtype'])){
+			switch($_POST['searchtype']){
+				case"category":
+					$like=" AND genre LIKE '%".$_POST['search-input']."%'";
+				break;
+				case"title":
+					$like=" AND title LIKE '%".$_POST['search-input']."%'";
+				break;
+				case"actor":
+					$like=" AND star LIKE '%".$_POST['search-input']."%'";
+				break;
+				case"director":
+					$like=" AND director LIKE '%".$_POST['search-input']."%'";
+				break;
+				case"country":
+					$like=" AND country LIKE '%".$_POST['search-input']."%'";
+				break;
+			}
+		}
+		// Get our comment count whil we're at it.
+		$this->row_m->sql['select'][] = "(SELECT COUNT(id) FROM ".
+				$this->db->protect_identifiers('comments', true)." WHERE module='movie'
+				AND is_active='1' AND entry_key='movie:post' AND entry_plural='movie:posts'
+				AND entry_id=".$this->db->protect_identifiers('movie.id', true).") as `comment_count`";
+
+		// Get the latest movie posts
+		$posts = $this->streams->entries->get_entries(array(
+			'stream'		=> 'movie',
+			'namespace'		=> 'movies',
+			'limit'			=> Settings::get('records_per_page'),
+			'where'			=> "`status` = 'live' ".$like."",
+			'paginate'		=> 'yes',
+			'pag_base'		=> site_url('movie/search'),
+			'pag_segment'   => 3
+		));
+
+		// Process posts
+		foreach ($posts['entries'] as &$post)
+		{
+			$this->_process_post($post);
+		}
+
+		// Set meta description based on post titles
+		$meta = $this->_posts_metadata($posts['entries']);
+
+		$data = array(
+			'pagination' => $posts['pagination'],
+			'posts' => $posts['entries']
+		);
+
+		$this->template
+			->title($this->module_details['name'])
+			->set_breadcrumb(lang('movie:movie_title'))
+			->set_metadata('og:title', $this->module_details['name'], 'og')
+			->set_metadata('og:type', 'movie', 'og')
+			->set_metadata('og:url', current_url(), 'og')
+			->set_metadata('og:description', $meta['description'], 'og')
+			->set_metadata('description', $meta['description'])
+			->set_metadata('keywords', $meta['keywords'])
+			->set_stream($this->stream->stream_slug, $this->stream->stream_namespace)
+			->set('posts', $posts['entries'])
+			->set('genre', config_item('genre'))
+			->set('pagination', $posts['pagination'])
+			->build('posts');
+	}	
 	public function index($genre=null)
 	{ 
 		if($genre!=null){$like=" AND genre LIKE '%".$genre."%'";}else{$like="";}
@@ -81,7 +149,7 @@ class Movie extends Public_Controller
 		$posts = $this->streams->entries->get_entries(array(
 			'stream'		=> 'movie',
 			'namespace'		=> 'movies',
-			'limit'			=> Settings::get('records_per_page'),
+			'limit'			=> 1,
 			'where'			=> "`status` = 'live' ".$like."",
 			'paginate'		=> 'yes',
 			'pag_base'		=> site_url('movie/page'),

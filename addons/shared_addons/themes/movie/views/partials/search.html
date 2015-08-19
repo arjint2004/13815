@@ -1,0 +1,16 @@
+        <!-- Search bar -->
+        <div class="search-wrapper">
+            <div class="container container--add">
+				<?php echo form_open('movie/search','id="search-form" class="search"');?>
+                    <input type="text" name="search-input" class="search__field" placeholder="Search">
+                    <select name="searchtype" id="search-sort" class="search__sort" tabindex="0">
+                        <option value="title" selected='selected'>By title</option>
+                        <option value="category">By Category</option>
+                        <option value="actor">By Actor</option>
+                        <option value="director">By Director</option>
+                        <option value="country">By Country</option>
+                    </select>
+                    <button type='submit' class="btn btn-md btn--danger search__button">search a movie</button>
+                <?php echo form_close();?>
+            </div>
+        </div>
