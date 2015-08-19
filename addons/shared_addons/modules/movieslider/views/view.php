@@ -1,7 +1,7 @@
 
 
 			{{ post }}
-			<h2 class="page-heading">Single Movieslider Post</h2>
+			<h2 class="page-heading">Featured News</h2>
 
                 <div class="post">
                     <div class="post__preview">
@@ -108,7 +108,7 @@
                         <a href="#" class="btn read-more post--btn">read more</a>
                     </div>
                 </div>
-		{{ /post }}
+			{{ /post }}
                 <div class="clearfix"></div>
                     <h2 class="page-heading">comments (<?=$post[0]['comment_count']?>)</h2>
 					<div class="comment-wrapper">

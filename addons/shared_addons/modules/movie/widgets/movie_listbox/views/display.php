@@ -1,6 +1,5 @@
 
 					<? 
-					
 					foreach($posts['entries'] as $cv=>$dtbnr){
 					   switch($cv){
 							case 0:
@@ -55,4 +54,5 @@
                             </div>
                          <!-- Movie variant with time -->
 						<? } } ?>
+						<?//=$posts['pagination']?>
 

@@ -1,7 +1,7 @@
 
 
 			{{ post }}
-			<h2 class="page-heading">Single Blog Post</h2>
+			<h2 class="page-heading">News Detail</h2>
 
                 <div class="post">
                     <div class="post__preview">

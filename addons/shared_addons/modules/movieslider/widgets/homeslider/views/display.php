@@ -97,7 +97,7 @@
                                      data-endeasing="Back.easeIn"
                                      >
                                      <?=$post_widget['animation_text_5']?>
-                                 </div>
+                                </div>
                                 <div class="caption slide__text margin-slider customin customout" 
                                      data-x="right" 
                                      data-y="250"
@@ -120,7 +120,7 @@
                                      data-endspeed="300"
                                      data-end="7700"
                                      data-endeasing="Power4.easeOut">
-                                     <a href="#" class="slide__link"><?=$post_widget['animation_text_7']?></a>
+                                     <a onclick="window.location='<?=site_url('movieslider/'.date('Y/m', $post_widget['created_on']).'/'.$post_widget['slug']);?>'" style="cursor:pointer;" class="slide__link"><?=$post_widget['animation_text_7']?></a>
                                  </div>
                             </li>
 							<?php endforeach ?>

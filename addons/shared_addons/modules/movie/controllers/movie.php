@@ -47,8 +47,9 @@ class Movie extends Public_Controller
 	 *
 	 * URIs such as `movie/page/x` also route here.
 	 */
-	public function homec()
+	public function homec($page=1)
 	{
+		$_GET['page']=$page;
 		$post[0]['headfoot']='home_movie';		
 		$this->template
 			->title($this->module_details['name'])

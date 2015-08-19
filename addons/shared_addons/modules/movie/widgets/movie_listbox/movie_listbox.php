@@ -50,7 +50,7 @@ class Widget_Movie_listbox extends Widgets
 			'limit'			=> 8,
 			'where'			=> "`status` = 'live'",
 			'sort'			=> "random",
-			'paginate'		=> 'yes',
+			'paginate'		=> 'no',
 			'pag_base'		=> site_url('movie/page'),
 			'pag_segment'   => 3
 		));
