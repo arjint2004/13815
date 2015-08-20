@@ -9987,7 +9987,9 @@ div.pagination ul li{
 	margin: 20px 5px;
 	text-align: center;
 	width: 25px;	
+	color:#ccc;
+	font-weight:bold;
 }	
 div.pagination ul li a{
-	
+	font-weight:normal;
 }

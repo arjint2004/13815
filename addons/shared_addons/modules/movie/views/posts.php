@@ -2,19 +2,21 @@
 				<h2 class="page-heading">Movies</h2>
                 
                 <div class="select-area">
-                    <form id='select' class="select" method='get'>
-                          <select name="select_item" class="select__sort" tabindex="0">
-							<? for($i=date('Y');$i>1950;$i--){?>
+                    <form id='select' class="select" action="<?=base_url('movie/index')?>" method='get'>
+                          <select name="year" class="select__sort" tabindex="0">
+						<form id='select' class="select" method='get'>	<? for($i=date('Y');$i>1950;$i--){?>
 							<option value="<?=$i?>"><?=$i?></option>
                             <? } ?>
                         </select>
                     </form>
-
-                    <div class="datepicker">
-                      <span class="datepicker__marker"><i class="fa fa-calendar"></i>Date</span>
-                      <input type="text" id="datepicker" value='03/10/2014' class="datepicker__input">
-                    </div>
-
+					
+					<form id='select' class="select" action="<?=base_url('movie/index')?>" method='get'>
+						<div class="datepicker">
+						  <span class="datepicker__marker"><i class="fa fa-calendar"></i>Date</span>
+						  <input type="text" id="datepicker" onchange="return submit();" name="date" value='03/10/2014' class="datepicker__input">
+						</div>
+					</form>
+					
                     <form class="select select--film-category" action="<?=base_url('movie/index')?>" method='get'>
                           <select name="genre" class="select__sort" onchange="return submit;" tabindex="0">
 							<? foreach($genre as $datagenre){?>

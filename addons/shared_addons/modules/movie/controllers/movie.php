@@ -138,7 +138,11 @@ class Movie extends Public_Controller
 	public function index($genre=null)
 	{ 
 		if($genre!=null){$like=" AND genre LIKE '%".$genre."%'";}else{$like="";}
-		if(isset($_GET['genre'])){$like=" AND genre LIKE '%".$_GET['genre']."%'";}else{$like="";}
+		if(isset($_GET['genre'])){$like=" AND genre LIKE '%".$_GET['genre']."%'"; 
+		}elseif(isset($_GET['year'])){$like=" AND year(release_date)='".$_GET['year']."'";
+		}elseif(isset($_GET['date'])){$like=" AND release_date='".$_GET['date']."'";}else{$like="";}
+		
+		print_r($_GET);		
 		// Get our comment count whil we're at it.
 		$this->row_m->sql['select'][] = "(SELECT COUNT(id) FROM ".
 				$this->db->protect_identifiers('comments', true)." WHERE module='movie'
@@ -149,7 +153,7 @@ class Movie extends Public_Controller
 		$posts = $this->streams->entries->get_entries(array(
 			'stream'		=> 'movie',
 			'namespace'		=> 'movies',
-			'limit'			=> 1,
+			'limit'			=> Settings::get('records_per_page'),
 			'where'			=> "`status` = 'live' ".$like."",
 			'paginate'		=> 'yes',
 			'pag_base'		=> site_url('movie/page'),
