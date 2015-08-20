@@ -85,7 +85,7 @@ $autoload['helper'] = array(
 |
 */
 
-$autoload['config'] = array('language');
+$autoload['config'] = array('language','movie/movie');
 
 
 /*
