@@ -142,7 +142,7 @@ class Movie extends Public_Controller
 		}elseif(isset($_GET['year'])){$like=" AND year(release_date)='".$_GET['year']."'";
 		}elseif(isset($_GET['date'])){$like=" AND release_date='".$_GET['date']."'";}else{$like="";}
 		
-		print_r($_GET);		
+		//print_r($like);		
 		// Get our comment count whil we're at it.
 		$this->row_m->sql['select'][] = "(SELECT COUNT(id) FROM ".
 				$this->db->protect_identifiers('comments', true)." WHERE module='movie'
