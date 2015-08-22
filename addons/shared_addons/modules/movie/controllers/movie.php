@@ -313,7 +313,7 @@ class Movie extends Public_Controller
 		}
 		$ognr=explode("&#44; ",$post['genre']);
 
-		$post['others']=$this->db->query("SELECT m.created_on,m.slug,m.title,f.path,f.filename FROM  ".$this->db->protect_identifiers('movie', true)." m JOIN ".$this->db->protect_identifiers('files', true)." f ON m.image=f.id WHERE m.genre LIKE '%".$ognr[0]."%' ORDER BY RAND() LIMIT 10")->result_array();
+		$post['others']=$this->db->query("SELECT m.created_on,m.slug,m.title,m.id_imdb,f.path,f.filename FROM  ".$this->db->protect_identifiers('movie', true)." m JOIN ".$this->db->protect_identifiers('files', true)." f ON m.image=f.id WHERE m.genre LIKE '%".$ognr[0]."%' ORDER BY RAND() LIMIT 10")->result_array();
 		//echo "<pre>";
 		//print_r($other);
 		$this->_single_view($post);

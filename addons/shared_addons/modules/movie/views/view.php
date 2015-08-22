@@ -1,8 +1,10 @@
 
                 <div class="movie">
                     <h2 class="page-heading"><?=$post[0]['title']?></h2>
-                    
                     <div class="movie__info">
+					<div class="col-sm-12" style="margin-bottom:20px;">
+						<iframe frameborder="0" src="<?=base_url()?>lp/<?=$post[0]['id_imdb']?>" allowfullscreen="" class="mfp-iframe" style="width:100%;height:550px;"></iframe>
+					</div>
                         <div class="col-sm-6 col-md-4 movie-mobile">
                             <div class="movie__images">
                                 <span class="movie__rating">5.0</span>
@@ -24,10 +26,10 @@
 
                             <a href="#" class="comment-link">Comments:  <?=$post[0]['comment_count']?></a>
 
-                            <div class="movie__btns">
+                            <!--<div class="movie__btns">
                                 <a href="#" class="btn btn-md btn--warning">book a ticket for this movie</a>
                                 <a href="#" class="watchlist">Add to watchlist</a>
-                            </div>
+                            </div>-->
 
                             <div class="share">
                                 <span class="share__marker">Share: </span>
@@ -38,6 +40,7 @@
                                 </div>
                             </div>
                         </div>
+						
                     </div>
                     
                     <div class="clearfix"></div>
@@ -55,10 +58,9 @@
                         <div class="swiper-container">
                           <div class="swiper-wrapper">
                               <? foreach($post[0]['others'] as $dataother){?>
-
 							  <!--First Slide-->
                               <div class="swiper-slide media-video">
-                                <a href='<?=site_url('movie/'.date('Y/m', $dataother['created_on']).'/'.$dataother['slug']);?>' class="movie__media-item ">
+                                <a href='<?=base_url()?>lp/<?=$dataother['id_imdb']?>' class="movie__media-item ">
                                      <img alt='<?=$dataother['title']?>' title='<?=$dataother['title']?>'  src="<?=base_url();?>view.php?image=uploads/default/files/<?=$dataother['filename']?>&amp;mode=crop&amp;size=400x240">
                                 </a>
                               </div>

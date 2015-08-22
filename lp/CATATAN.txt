@@ -1,0 +1,3 @@
+karna ada file yg menggunakan enkripsi, dan untuk menghindari "detect exploit" pada server,
+
+RENAME FILE data.txt menjadi data.php

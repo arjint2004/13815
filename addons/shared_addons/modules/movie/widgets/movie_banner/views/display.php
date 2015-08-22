@@ -1,6 +1,6 @@
 					<? foreach($posts['entries'] as $dtbnr){ ?>
 						<div class="banner-wrap">
-							<img alt='banner' src="<?=base_url()?>view.php?image=uploads/default/files/<?=$dtbnr['image']['filename']?>&mode=crop&size=380x592">
+							<img style="cursor:pointer;" onclick="window.location='<?=site_url('movie/'.date('Y/m', $dtbnr['created_on']).'/'.$dtbnr['slug']);?>'" alt='banner' src="<?=base_url()?>view.php?image=uploads/default/files/<?=$dtbnr['image']['filename']?>&mode=crop&size=380x592">
 						</div>
 					<? } ?>	
 
