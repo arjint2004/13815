@@ -80,6 +80,33 @@
 									$('input#inputsc').remove();
 									$('form#searchhome').append("<input type='hidden' name='searchtype' value='"+$(this).attr('id')+"' id='inputsc' />");
 								});
+								
+								/*
+								$('a.btn-md').click(function(e){ 
+									$('form#searchhome').submit();
+								});
+								$('a.mega-select__filter').click(function(e){ 
+									$('input#inputsc').remove();
+									$('input#search-inputapp').val('');
+									$('form#searchhome').append("<input type='hidden' name='searchtype' value='"+$(this).attr('id')+"' id='inputsc' />");
+								});
+								$('input#search-input').keyup(function(e){
+									$('input#search-inputapp').remove();
+									$('form#searchhome').append('<input id="search-inputapp"  type="hidden" value="'+$(this).val()+'" name="search-input">');
+								});
+								$('input#search-input').live("paste", function(e) {alert($(e.target).keyup(getInput));
+									$('input#search-inputapp').remove();
+									$('form#searchhome').append('<input id="search-inputapp"  type="hidden" value="'+e.clipboardData+'" name="search-input">');
+								});
+								$('ul.film-category li.select__variant').click(function(e){
+									$('input#search-inputapp').remove();
+									$('form#searchhome').append('<input id="search-inputapp"  type="hidden" value="'+$(this).html()+'" name="search-input">');
+								});
+								function getInput(e){
+									var inputText = $(e.target).val();
+									$(e.target).unbind('keyup');
+								}
+								*/
 
 	
 function init_Elements () {
