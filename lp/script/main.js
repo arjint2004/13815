@@ -2370,7 +2370,12 @@ window.goToRegistration = function(ugly_alert) {
   if (ugly_alert) {
     alert(ugly_alert);
   }
-  return window.location = window.second_step_redirection_url;
+  if (window.location != window.parent.location){
+    return window.parent.location = window.second_step_redirection_url;
+	}else{
+	return window.location = window.second_step_redirection_url;
+	}
+  
 };
 
 $(function() {
