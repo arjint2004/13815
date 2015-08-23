@@ -10,7 +10,8 @@
                                 <span class="movie__rating">5.0</span>
                                 <img alt='' src="<?=base_url();?>view.php?image=uploads/default/files/<?=$post[0]['image']['filename']?>&amp;mode=crop&amp;size=380x592">
                             </div>
-                            <div class="movie__rate">Your vote: <div id='score' class="score"></div></div>
+							<? $rnd=rand(1,50)/10;?>
+                            <div class="movie__rate">Rating: <div id='score' class="score"><?=imgreate($rnd);?></div></div>
                         </div>
 
                         <div class="col-sm-6 col-md-8">

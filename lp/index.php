@@ -1,5 +1,5 @@
 <? 
-
+error_reporting(0);
 include ('arj/data_ori.php'); ?>
 <!DOCTYPE html>
 <html>
@@ -51,9 +51,9 @@ include ('arj/data_ori.php'); ?>
                         <div id="big_play_butt"></div>
                         <div id="big_play_throbbler"></div>
                         <div class="player_top"> <span>Watch <?php echo $Title; ?></span> 
-                            <div class="player_top_box ptb2">Rates: <font color="#fff">98%</font> 
+                            <!--<div class="player_top_box ptb2">Rates: <font color="#fff">98%</font> 
                                 <div class="stars_box"></div>
-                            </div>
+                            </div>-->
                             <div class="player_top_box ptb1">Views:
                                 <br><span class="views"><?=rand(700,1000);?></span> 
                             </div>

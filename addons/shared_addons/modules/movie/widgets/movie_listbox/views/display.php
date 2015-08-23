@@ -1,5 +1,5 @@
 
-					<? 
+					<?
 					foreach($posts['entries'] as $cv=>$dtbnr){
 					   switch($cv){
 							case 0:
@@ -38,17 +38,19 @@
                                         <img src="<?=base_url()?>view.php?image=uploads/default/files/<?=$dtbnr['image']['filename']?>&mode=crop&size=423x423" />
                                     </a>
                                 </div>
-
+								<? $rnd=rand(1,50)/10;?>
                                 <div class="movie__info">
                                     <a href='<?=site_url('movie/'.date('Y/m', $dtbnr['created_on']).'/'.$dtbnr['slug']);?>' class="movie__title"><?=$dtbnr['title']?> (<?=date('Y',$dtbnr['release_date'])?>)  </a>
 
                                     <p class="movie__time"><?=$dtbnr['runtime']?> min</p>
 
                                     <p class="movie__option"><?=$dtbnr['genre']?></p>
-                                    
+									
                                     <div class="movie__rate">
-                                        <div class="score"></div>
-                                        <span class="movie__rating">4.1</span>
+                                        <div class="score" style="cursor: pointer; width: 130px;">
+											<?=imgreate($rnd);?>
+										</div>
+                                        <span class="movie__rating"><?=$rnd;?></span>
                                     </div>               
                                 </div>
                             </div>

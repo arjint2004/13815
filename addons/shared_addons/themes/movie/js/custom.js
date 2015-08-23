@@ -392,13 +392,13 @@ function init_Home() {
 
     //4. Rating scrore init
     //Rating star
-    $('.score').raty({
+    /*$('.score').raty({
         width:130, 
         score: 0,
         path: base_url+'addons/shared_addons/themes/movie/images/rate/',
         starOff : 'star-off.svg',
         starOn  : 'star-on.svg' 
-    });
+    });*/
 
     //5. Scroll down navigation function
     //scroll down
@@ -1096,13 +1096,13 @@ function init_MovieList () {
 
     //3. Rating scrore init
     //Rating star
-    $('.score').raty({
+    /*$('.score').raty({
         width:130, 
         score: 0,
         path: base_url+'addons/shared_addons/themes/movie/images/rate/',
         starOff : 'star-off.svg',
         starOn  : 'star-on.svg' 
-    });
+    });*/
 
     //4. Sorting by category
     			// sorting function
@@ -1148,13 +1148,13 @@ function init_MoviePage () {
 
 	//1. Rating scrore init
     //Rating star
-    $('.score').raty({
+   /* $('.score').raty({
         width:130, 
         score: 5,
         path: base_url+'addons/shared_addons/themes/movie/images/rate/',
         starOff : 'star-off.svg',
         starOn  : 'star-on.svg' 
-    });
+    });*/
 
     //2. Swiper slider
     //Media slider
@@ -1789,13 +1789,13 @@ function init_Rates () {
 
 	//1. Rating fucntion
 				//Rating star
-                $('.score').raty({
+               /* $('.score').raty({
                     width:130, 
                     score: 0,
                     path: base_url+'addons/shared_addons/themes/movie/images/rate/',
                     starOff : 'star-off.svg',
                     starOn  : 'star-on.svg' 
-                });
+                });*/
 
                 //After rate callback
                 $('.score').click(function () {

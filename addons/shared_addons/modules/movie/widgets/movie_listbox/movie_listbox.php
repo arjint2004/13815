@@ -47,7 +47,7 @@ class Widget_Movie_listbox extends Widgets
 		$posts = $this->streams->entries->get_entries(array(
 			'stream'		=> 'movie',
 			'namespace'		=> 'movies',
-			'limit'			=> 8,
+			'limit'			=> 24,
 			'where'			=> "`status` = 'live'",
 			'sort'			=> "random",
 			'paginate'		=> 'no',
