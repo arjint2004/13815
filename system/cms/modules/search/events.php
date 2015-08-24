@@ -29,26 +29,38 @@ class Events_Search
         Events::register('page_deleted', array($this, 'drop_page'));
     }
     
-    public function index_post($id)
+    public function index_post($idr)
     {
-    	$this->ci->load->model('blog/blog_m');
-
-    	$post = $this->ci->blog_m->get($id);
+    	if(is_array($idr)){
+			$id=$idr[0];
+			$table=$idr[1];
+		}else{
+			$id=$idr;
+			$table='blog';		
+		}
+		
+		$this->ci->load->model(''.$table.'/'.$table.'_m');
+    	$mdl = ''.$table.'_m';
+		// echo $id;
+		// echo $table;
+		// die();
+    	//$post = $this->ci->blog_m->get($id);
+    	$post = $this->ci->$mdl->get($id);
 
     	// Only index live articles
     	if ($post->status === 'live')
     	{
     		$this->ci->search_index_m->index(
-    			'blog', 
-    			'blog:post', 
-    			'blog:posts', 
+    			''.$table.'', 
+    			''.$table.':post', 
+    			''.$table.':posts', 
     			$id,
-    			'blog/'.date('Y/m/', $post->created_on).$post->slug,
+    			''.$table.'/'.date('Y/m/', $post->created_on).$post->slug,
     			$post->title,
     			$post->body, 
     			array(
-    				'cp_edit_uri' 	=> 'admin/blog/edit/'.$id,
-    				'cp_delete_uri' => 'admin/blog/delete/'.$id,
+    				'cp_edit_uri' 	=> 'admin/'.$table.'/edit/'.$id,
+    				'cp_delete_uri' => 'admin/'.$table.'/delete/'.$id,
     				'keywords' 		=> $post->keywords,
     			)
     		);
@@ -56,15 +68,22 @@ class Events_Search
     	// Remove draft articles
     	else
     	{
-    		$this->ci->search_index_m->drop_index('blog', 'blog:post', $id);
+    		$this->ci->search_index_m->drop_index(''.$table.'', ''.$table.':post', $id);
     	}
 	}
 
     public function drop_post($ids)
     {
+		if(isset($ids['table'])){
+			$table=	$ids['table'];
+			unset($ids['table']);
+		}else{
+			$table=	'blog';	
+		}
+
     	foreach ($ids as $id)
     	{
-			$this->ci->search_index_m->drop_index('blog', 'blog:post', $id);
+			$this->ci->search_index_m->drop_index(''.$table.'', ''.$table.':post', $id);
 		}
 	}
     

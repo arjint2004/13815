@@ -223,13 +223,13 @@ class Admin extends Admin_Controller
 				$this->session->set_flashdata('success', sprintf($this->lang->line('movieslider:post_add_success'), $this->input->post('title')));
 
 				// Movieslider article has been updated, may not be anything to do with publishing though
-				Events::trigger('post_created', $id);
+				Events::trigger('post_created', array($id,'movieslider'));
 
 				// They are trying to put this live
 				if ($this->input->post('status') == 'live')
 				{
 					// Fire an event, we're posting a new movieslider!
-					Events::trigger('post_published', $id);
+					Events::trigger('post_published', array($id,'movieslider'));
 				}
 			}
 			else
@@ -278,7 +278,7 @@ class Admin extends Admin_Controller
 	 * @param int $id The ID of the movieslider post to edit
 	 */
 	public function edit($id = 0)
-	{
+	{ 
 		$id or redirect('admin/movieslider');
 		$this->load->library('files/files');
 		$post = $this->movieslider_m->get($id);
@@ -341,7 +341,7 @@ class Admin extends Admin_Controller
 		}
 
 		if ($this->form_validation->run())
-		{
+		{//echo "<pre>";print_r($_FILES);die();
 			$author_id = empty($post->display_name) ? $this->current_user->id : $post->author_id;
 
 			$extra = array(
@@ -364,17 +364,19 @@ class Admin extends Admin_Controller
 
 			if ($this->streams->entries->update_entry($id, $_POST, 'movieslider', 'moviesliders', array('updated'), $extra))
 			{
-				$this->files->delete_file($_POST['image']);
+				if($_FILES['image_file']['tmp_name']!=''){
+					$this->files->delete_file($_POST['image']);
+				}
 				$this->session->set_flashdata(array('success' => sprintf(lang('movieslider:edit_success'), $this->input->post('title'))));
 
 				// Movieslider article has been updated, may not be anything to do with publishing though
-				Events::trigger('post_updated', $id);
+				Events::trigger('post_updated', array($id,'movieslider'));
 
 				// They are trying to put this live
 				if ($post->status != 'live' and $this->input->post('status') == 'live')
 				{
 					// Fire an event, we're posting a new movieslider!
-					Events::trigger('post_published', $id);
+					Events::trigger('post_published', array($id,'movieslider'));
 				}
 			}
 			else
@@ -541,7 +543,7 @@ class Admin extends Admin_Controller
 			}
 
 			// Fire an event. We've deleted one or more movieslider posts.
-			Events::trigger('post_deleted', $deleted_ids);
+			Events::trigger('post_deleted', array_merge($deleted_ids,array('table'=>'movieslider')));
 		}
 
 		// Some pages have been deleted
