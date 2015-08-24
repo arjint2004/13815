@@ -1,34 +1,15 @@
 
 					<?
+					$cc=0;
+					$cc2=1;
 					foreach($posts['entries'] as $cv=>$dtbnr){
-					   switch($cv){
-							case 0:
-								$diwalik="movie--test--dark movie--test--left";
-							break;
-							case 1:
-								$diwalik="movie--test--light movie--test--left";
-							break;
-							case 2:
-								$diwalik="movie--test--light movie--test--right";
-							break;
-							case 3:
-								$diwalik="movie--test--dark movie--test--right";
-							break;
-							case 4:
-								$diwalik="movie--test--dark movie--test--left";
-							break;
-							case 5:
-								$diwalik="movie--test--light movie--test--left";
-							break;
-							case 6:
-								$diwalik="movie--test--light movie--test--right";
-							break;
-							case 7:
-								$diwalik="movie--test--dark movie--test--right";
-							break;
-					   }
-					if(file_exists(str_replace("index.php","",$_SERVER['SCRIPT_FILENAME'])."uploads/default/files/".$dtbnr['image']['filename']."")){
-					
+					if(file_exists(str_replace("index.php","",$_SERVER['SCRIPT_FILENAME'])."uploads/default/files/".$dtbnr['image']['filename']."") && $dtbnr['image']['filename']!=''){
+						if($cc2%2==0){
+							$cc=$cc-1;
+						}
+						$cc=$cc+1;
+						$cc2=$cc2+1;
+						if($cc%2==0){$diwalik="movie--test--dark movie--test--left";}else{$diwalik="movie--test--light movie--test--right";}
 					//echo "<pre>";print_r(str_replace("index.php","",$_SERVER['SCRIPT_FILENAME'])."uploads/default/files/".$dtbnr['image']['filename']."");
 					?>
                         <!-- Movie variant with time -->
