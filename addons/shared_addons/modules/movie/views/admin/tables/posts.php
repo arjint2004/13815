@@ -32,7 +32,7 @@
 							<a href="<?php echo site_url('movie/preview/' . $post->preview_hash) ?>" title="<?php echo lang('global:preview')?>" class="button" target="_blank"><?php echo lang('global:preview')?></a>
                         <?php endif ?>
 						<a href="<?php echo site_url('admin/movie/edit/' . $post->id) ?>" title="<?php echo lang('global:edit')?>" class="button"><?php echo lang('global:edit')?></a>
-						<a href="<?php echo site_url('admin/movie/delete/' . $post->id) ?>" title="<?php echo lang('global:delete')?>" class="button confirm"><?php echo lang('global:delete')?></a>
+						<a href="<?php echo site_url('admin/movie/delete/' . $post->id.'/'.$post->image) ?>" title="<?php echo lang('global:delete')?>" class="button confirm"><?php echo lang('global:delete')?></a>
 					</td>
 				</tr>
 			<?php endforeach ?>

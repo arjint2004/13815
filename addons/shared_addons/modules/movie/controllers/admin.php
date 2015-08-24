@@ -521,7 +521,7 @@ class Admin extends Admin_Controller
 	public function edit($id = 0)
 	{
 		$id or redirect('admin/movie');
-
+		$this->load->library('files/files');
 		$post = $this->movie_m->get($id);
 		
 		// They are trying to put this live
@@ -605,6 +605,7 @@ class Admin extends Admin_Controller
 
 			if ($this->streams->entries->update_entry($id, $_POST, 'movie', 'movies', array('updated'), $extra))
 			{
+				$this->files->delete_file($_POST['image']);
 				$this->session->set_flashdata(array('success' => sprintf(lang('movie:edit_success'), $this->input->post('title'))));
 
 				// Movie article has been updated, may not be anything to do with publishing though
@@ -748,7 +749,7 @@ class Admin extends Admin_Controller
 	 *
 	 * @param int $id The ID of the movie post to delete
 	 */
-	public function delete($id = 0)
+	public function delete($id = 0,$image='')
 	{
 		$this->load->model('comments/comment_m');
 		$this->load->library('files/files');
@@ -756,8 +757,7 @@ class Admin extends Admin_Controller
 
 		// Delete one
 		$ids = ($id) ? array($id) : $this->input->post('action_to');
-		$id_file = ($id) ? array($id) : $this->input->post('id_file');
-
+		$id_file = ($image) ? array($id=>$image) : $this->input->post('id_file');
 		// Go through the array of slugs to delete
 		if ( ! empty($ids))
 		{
@@ -771,7 +771,7 @@ class Admin extends Admin_Controller
 					if ($this->movie_m->delete($id))
 					{
 						$this->comment_m->where('module', 'movie')->delete_by('entry_id', $id);
-						$this->pr($this->files->delete_file($id_file[$id]));
+						$this->files->delete_file($id_file[$id]);
 						// Wipe cache for this model, the content has changed
 						$this->pyrocache->delete('movie_m');
 						$post_titles[] = $post->title;

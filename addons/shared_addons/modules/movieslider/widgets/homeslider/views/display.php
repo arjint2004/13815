@@ -5,7 +5,7 @@
                         <ul>
 							<?php foreach($movieslider_widget['entries'] as $post_widget): ?>
                             <li data-transition="fade" data-slotamount="7" class="slide" data-slide='Rush.'>
-                                <img alt='' src="<?=$post_widget['image']['image']?>">
+                                <img alt='' src="<?=base_url()?>view.php?image=uploads/default/files/<?=$post_widget['image']['filename']?>&mode=crop&size=1920x616">
                                 <div class="caption slide__name margin-slider" 
                                      data-x="right" 
                                      data-y="80" 

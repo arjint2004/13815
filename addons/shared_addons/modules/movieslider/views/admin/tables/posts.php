@@ -13,7 +13,7 @@
 		<tbody>
 			<?php foreach ($movieslider as $post) : ?>
 				<tr>
-					<td><?php echo form_checkbox('action_to[]', $post->id) ?></td>
+					<td><?php echo form_checkbox('action_to[]', $post->id) ?><?php echo form_hidden('id_file['.$post->id.']', $post->image) ?></td>
 					<td><?php echo $post->title ?></td>
 					<td class="collapse"><?php echo $post->category_title ?></td>
 					<td class="collapse"><?php echo format_date($post->created_on) ?></td>
@@ -32,7 +32,7 @@
 							<a href="<?php echo site_url('movieslider/preview/' . $post->preview_hash) ?>" title="<?php echo lang('global:preview')?>" class="button" target="_blank"><?php echo lang('global:preview')?></a>
                         <?php endif ?>
 						<a href="<?php echo site_url('admin/movieslider/edit/' . $post->id) ?>" title="<?php echo lang('global:edit')?>" class="button"><?php echo lang('global:edit')?></a>
-						<a href="<?php echo site_url('admin/movieslider/delete/' . $post->id) ?>" title="<?php echo lang('global:delete')?>" class="button confirm"><?php echo lang('global:delete')?></a>
+						<a href="<?php echo site_url('admin/movieslider/delete/' . $post->id.'/'.$post->image) ?>" title="<?php echo lang('global:delete')?>" class="button confirm"><?php echo lang('global:delete')?></a>
 					</td>
 				</tr>
 			<?php endforeach ?>
