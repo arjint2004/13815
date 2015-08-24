@@ -16,6 +16,14 @@ include ('arj/data_ori.php'); ?>
     <script src="script/main.js" type="text/javascript"></script>
     <link href="style.css" rel="stylesheet" type="text/css" media="screen">
     <link href="script/player.css" type="text/css" rel="stylesheet" />
+	<style>
+		<? 
+			$playerback=array('movie_back.png','20thFox.png','1280x720-6sr.jpg','paramount_intro_sample_by_icepony64-d88n81s.jpg','fox_video_2010_by_charmedpiper1973-d429owp.png.jpg');
+			$ky=array_rand($playerback);
+			$usmg=$playerback[$ky];
+		?>
+		#player_section #movie_player #movie_player_green{position:absolute;width:100%;height:100%;background:url("img/<?=$usmg?>") center no-repeat;background-size:contain;display:none}
+	</style>
 </head>
 
 <body class="home color-red">
