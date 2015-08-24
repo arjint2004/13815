@@ -39,6 +39,7 @@
 */
 
 $route['default_controller']                = 'movie/homec';
+$route['login']                				= 'admin';
 $route['home']                				= 'movie/homec';
 $route['404_override']                      = 'movie/404';
 
