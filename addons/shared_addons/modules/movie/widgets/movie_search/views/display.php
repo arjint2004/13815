@@ -3,7 +3,7 @@
                     <div class="mega-select-marker">
 
                         <div class="marker-indecator cinema">
-                            <p class="select-marker"><span>find your </span> <br>cinema</p>
+                            <p class="select-marker"><span>find by </span> <br>title</p>
                         </div>
 
                         <div class="marker-indecator film-category">
@@ -41,7 +41,7 @@
                           <?php echo form_close();?>
 						  <input name="zzz" id="search-input" type='hidden' class="select__field" />
                           <div class="select__btn">
-                            <a href="#" class="btn btn-md btn--danger cinema">find <span class="hidden-exrtasm">suitable cimema</span></a>
+                            <a href="#" class="btn btn-md btn--danger cinema">find <span class="hidden-exrtasm">by title</span></a>
                             <a href="#" class="btn btn-md btn--danger film-category">find <span class="hidden-exrtasm">best category</span></a>
                             <a href="#" class="btn btn-md btn--danger actors">find <span class="hidden-exrtasm">talented actors</span></a>
                             <a href="#" class="btn btn-md btn--danger director">find <span class="hidden-exrtasm">favorite director</span></a>
